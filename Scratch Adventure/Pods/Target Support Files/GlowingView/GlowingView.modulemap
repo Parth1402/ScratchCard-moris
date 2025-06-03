@@ -1,0 +1,6 @@
+framework module GlowingView {
+  umbrella header "GlowingView-umbrella.h"
+
+  export *
+  module * { export * }
+}

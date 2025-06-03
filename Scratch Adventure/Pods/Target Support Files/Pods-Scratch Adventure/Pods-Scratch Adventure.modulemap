@@ -1,0 +1,6 @@
+framework module Pods_Scratch_Adventure {
+  umbrella header "Pods-Scratch Adventure-umbrella.h"
+
+  export *
+  module * { export * }
+}

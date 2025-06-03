@@ -1,0 +1,255 @@
+PODS:
+  - AlignedCollectionViewFlowLayout (1.1.2)
+  - AppsFlyerFramework (6.17.0):
+    - AppsFlyerFramework/Main (= 6.17.0)
+  - AppsFlyerFramework/Main (6.17.0)
+  - Blurberry (0.1.0)
+  - Device (3.2.1)
+  - DPOTPView (1.5.12)
+  - Firebase/CoreOnly (11.12.0):
+    - FirebaseCore (~> 11.12.0)
+  - Firebase/Messaging (11.12.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 11.12.0)
+  - FirebaseCore (11.12.0):
+    - FirebaseCoreInternal (~> 11.12.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/Logger (~> 8.0)
+  - FirebaseCoreInternal (11.12.0):
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+  - FirebaseInstallations (11.12.0):
+    - FirebaseCore (~> 11.12.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - PromisesObjC (~> 2.4)
+  - FirebaseMessaging (11.12.0):
+    - FirebaseCore (~> 11.12.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleDataTransport (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/Reachability (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - nanopb (~> 3.30910.0)
+  - FSPagerView (0.8.3)
+  - GlowingView (0.0.2)
+  - GLScratchCard (0.1.0)
+  - GoogleDataTransport (10.1.0):
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - GoogleUtilities/AppDelegateSwizzler (8.0.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (8.0.2):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.0.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (8.0.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (8.0.2)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.0.2)
+  - GoogleUtilities/Reachability (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - Hero (1.6.4)
+  - IQKeyboardCore (1.0.5)
+  - IQKeyboardManagerSwift (8.0.1):
+    - IQKeyboardManagerSwift/Appearance (= 8.0.1)
+    - IQKeyboardManagerSwift/Core (= 8.0.1)
+    - IQKeyboardManagerSwift/IQKeyboardReturnManager (= 8.0.1)
+    - IQKeyboardManagerSwift/IQKeyboardToolbarManager (= 8.0.1)
+    - IQKeyboardManagerSwift/IQTextView (= 8.0.1)
+    - IQKeyboardManagerSwift/Resign (= 8.0.1)
+  - IQKeyboardManagerSwift/Appearance (8.0.1):
+    - IQKeyboardManagerSwift/Core
+  - IQKeyboardManagerSwift/Core (8.0.1):
+    - IQKeyboardNotification
+    - IQTextInputViewNotification
+  - IQKeyboardManagerSwift/IQKeyboardReturnManager (8.0.1):
+    - IQKeyboardReturnManager
+  - IQKeyboardManagerSwift/IQKeyboardToolbarManager (8.0.1):
+    - IQKeyboardManagerSwift/Core
+    - IQKeyboardToolbarManager
+  - IQKeyboardManagerSwift/IQTextView (8.0.1):
+    - IQTextView
+  - IQKeyboardManagerSwift/Resign (8.0.1):
+    - IQKeyboardManagerSwift/Core
+  - IQKeyboardNotification (1.0.3)
+  - IQKeyboardReturnManager (1.0.4):
+    - IQKeyboardCore (= 1.0.5)
+  - IQKeyboardToolbar (1.1.1):
+    - IQKeyboardCore
+    - IQKeyboardToolbar/Core (= 1.1.1)
+  - IQKeyboardToolbar/Core (1.1.1):
+    - IQKeyboardCore
+    - IQKeyboardToolbar/Placeholderable
+  - IQKeyboardToolbar/Placeholderable (1.1.1):
+    - IQKeyboardCore
+  - IQKeyboardToolbarManager (1.1.3):
+    - IQKeyboardToolbar
+    - IQTextInputViewNotification
+  - IQTextInputViewNotification (1.0.8):
+    - IQKeyboardCore
+  - IQTextView (1.0.5):
+    - IQKeyboardToolbar/Placeholderable
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
+  - Malert (4.2)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
+  - Pageboy (4.2.0)
+  - pop (1.0.12)
+  - PromisesObjC (2.4.0)
+  - ReachabilitySwift (5.2.4)
+  - ScreenShield (1.2.2)
+  - Siren (6.1.3)
+  - SPAlert (5.1.8)
+  - SPConfetti (1.4.0)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
+  - SwiftyStarRatingView (1.0.4)
+  - SwiftyStoreKit (0.16.1)
+  - TrueTime (5.0.3)
+  - ViewAnimator (3.1.0)
+  - VisualEffectView (5.0.0)
+
+DEPENDENCIES:
+  - AlignedCollectionViewFlowLayout
+  - AppsFlyerFramework
+  - Blurberry
+  - Device (from `https://github.com/Ekhoo/Device.git`, commit `f2f796b86201cd96271417b99dfd41eb338db395`)
+  - DPOTPView
+  - Firebase/Messaging
+  - FSPagerView
+  - GlowingView
+  - GLScratchCard
+  - Hero
+  - IQKeyboardManagerSwift
+  - Koloda
+  - Malert
+  - Pageboy (~> 4.0)
+  - ReachabilitySwift
+  - ScreenShield
+  - Siren
+  - SPAlert
+  - SPConfetti
+  - SwiftyRSA
+  - SwiftyStarRatingView
+  - SwiftyStoreKit
+  - TrueTime
+  - ViewAnimator
+  - VisualEffectView
+
+SPEC REPOS:
+  trunk:
+    - AlignedCollectionViewFlowLayout
+    - AppsFlyerFramework
+    - Blurberry
+    - DPOTPView
+    - Firebase
+    - FirebaseCore
+    - FirebaseCoreInternal
+    - FirebaseInstallations
+    - FirebaseMessaging
+    - FSPagerView
+    - GlowingView
+    - GLScratchCard
+    - GoogleDataTransport
+    - GoogleUtilities
+    - Hero
+    - IQKeyboardCore
+    - IQKeyboardManagerSwift
+    - IQKeyboardNotification
+    - IQKeyboardReturnManager
+    - IQKeyboardToolbar
+    - IQKeyboardToolbarManager
+    - IQTextInputViewNotification
+    - IQTextView
+    - Koloda
+    - Malert
+    - nanopb
+    - Pageboy
+    - pop
+    - PromisesObjC
+    - ReachabilitySwift
+    - ScreenShield
+    - Siren
+    - SPAlert
+    - SPConfetti
+    - SwiftyRSA
+    - SwiftyStarRatingView
+    - SwiftyStoreKit
+    - TrueTime
+    - ViewAnimator
+    - VisualEffectView
+
+EXTERNAL SOURCES:
+  Device:
+    :commit: f2f796b86201cd96271417b99dfd41eb338db395
+    :git: https://github.com/Ekhoo/Device.git
+
+CHECKOUT OPTIONS:
+  Device:
+    :commit: f2f796b86201cd96271417b99dfd41eb338db395
+    :git: https://github.com/Ekhoo/Device.git
+
+SPEC CHECKSUMS:
+  AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  AppsFlyerFramework: 34cef9f9653f4fd01c27d4d87784425b9271f82f
+  Blurberry: 361c1a4778ea0c46da25716b03d1344a4cf8fe01
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  DPOTPView: 28d8a0a84a2ff4b1e4a7712065aba1cbb14e2704
+  Firebase: 735108d2d0b67827cd929bfe8254983907c4479f
+  FirebaseCore: 9d7a0caf39ec7317fbe13b3c7864c8c2acc60da8
+  FirebaseCoreInternal: 480d23e21f699cc7bcbc3d8eaa301f15d1e3ffaf
+  FirebaseInstallations: 41189d8b11007152d9e46ec844019f38a0a4282a
+  FirebaseMessaging: 3a5de79d8dce82b70815123c05dfb8825111f15d
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  GlowingView: 5af33c3b517df374a6632ee1989f78f93cb7ca54
+  GLScratchCard: 831ed1db01ef200c4617d816217571a99645962f
+  GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
+  Hero: 473a0143017e1371d050fcbedb67d317925097f2
+  IQKeyboardCore: 28c8bf3bcd8ba5aa1570b318cbc4da94b861711e
+  IQKeyboardManagerSwift: 835fc9c6e4732398113406d84900ad2e8f141218
+  IQKeyboardNotification: d7382c4466c5a5adef92c7452ebf861b36050088
+  IQKeyboardReturnManager: 972be48528ce9e7508ab3ab15ac7efac803f17f5
+  IQKeyboardToolbar: d4bdccfb78324aec2f3920659c77bb89acd33312
+  IQKeyboardToolbarManager: 6c693c8478d6327a7ef2107528d29698b3514dbb
+  IQTextInputViewNotification: f5e954d8881fd9808b744e49e024cc0d4bcfe572
+  IQTextView: ae13b4922f22e6f027f62c557d9f4f236b19d5c7
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
+  Malert: 4327c2aab8aab459824ebf647195cfb6b5cd06a4
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
+  Pageboy: 7f7886f61c76633df635861bf7839caf2cabdb3e
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
+  ScreenShield: 7e71aed773345e20badd84c68b6ae2909bd5d46f
+  Siren: c0f6012f61196b73455202db07730f6454a4beb0
+  SPAlert: 7027ed9df9a2ba8202cab39fd05b53e110f48a99
+  SPConfetti: 4ba720ff652d960f59c3e4eadee2c0c3ef6ce9a4
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+  SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+  ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
+  VisualEffectView: 173e1fabc2eb37af663547e14dc12efef7d2da8b
+
+PODFILE CHECKSUM: dd4c9f110928fac72cce869cf2fef937c4b27ee0
+
+COCOAPODS: 1.16.2
