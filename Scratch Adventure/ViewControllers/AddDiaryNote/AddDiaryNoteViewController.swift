@@ -63,8 +63,8 @@ class AddDiaryNoteViewController: UIViewController, HorizontalCalendarViewDelega
         self.view.addSubview(ContentContainer)
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
-                ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+                ContentContainer.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 60),
+                ContentContainer.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -60),
                 ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])

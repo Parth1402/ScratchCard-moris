@@ -4,6 +4,8 @@ class SheetContentViewController: UIViewController {
     
     var sheetImageView: UIImageView!
     var selectedIndex = 0
+    
+   
 
     lazy var topSegmentedControl: UISegmentedControl = {
          let control = UISegmentedControl(items: ["Notes", "Leaderboards"])
@@ -15,13 +17,13 @@ class SheetContentViewController: UIViewController {
         // Set default (unselected) font style
         control.setTitleTextAttributes([
             .foregroundColor: UIColor.lightGray,
-            .font: UIFont.mySystemFont(ofSize: 14)
+            .font: UIFont.mySystemFont(ofSize: DeviceSize.isiPadDevice ? 17 : 14)
         ], for: .normal)
 
         // Set selected font style
         control.setTitleTextAttributes([
             .foregroundColor: UIColor.white,
-            .font: UIFont.myBoldSystemFont(ofSize: 14)
+            .font: UIFont.myBoldSystemFont(ofSize: DeviceSize.isiPadDevice ? 17 : 14)
         ], for: .selected)
         
          control.setTitleTextAttributes([.foregroundColor: UIColor.lightGray], for: .normal)
@@ -51,6 +53,12 @@ class SheetContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if DeviceSize.isiPadDevice {
+            var traitCollection: UITraitCollection {
+                UITraitCollection(traitsFrom: [super.traitCollection, UITraitCollection(horizontalSizeClass: .compact)])
+            }
+        }
 
         // Use a dark background to match the desired sheet appearance
      //   view.backgroundColor = UIColor(red: 0.1, green: 0.05, blue: 0.15, alpha: 1.0) // Dark purple/black
@@ -84,6 +92,7 @@ class SheetContentViewController: UIViewController {
         sheetContentContainer.addSubview(sheetImageView)
         sheetContentContainer.addSubview(topSegmentedControl)
         sheetContentContainer.addSubview(dotIndicator)
+        
 
         NSLayoutConstraint.activate([
             // Segmented Control Constraints

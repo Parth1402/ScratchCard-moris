@@ -380,3 +380,14 @@ extension UIImage {
         }
     }
 }
+
+extension UIViewController {
+    // ✅ Helper function to get file URL in the Documents directory
+    func getFileURL(for fileName: String) -> URL? {
+        let fileManager = FileManager.default
+        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            return nil
+        }
+        return documentsDirectory.appendingPathComponent(fileName)
+    }
+}

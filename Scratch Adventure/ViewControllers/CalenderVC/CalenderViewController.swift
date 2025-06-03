@@ -45,7 +45,7 @@ class CalenderViewController: UIViewController {
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+                ContentContainer.widthAnchor.constraint(equalToConstant: self.view.layer.bounds.width - 60),
                 ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])

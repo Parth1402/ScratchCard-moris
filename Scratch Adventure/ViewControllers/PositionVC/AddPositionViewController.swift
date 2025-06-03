@@ -56,7 +56,7 @@ class AddPositionViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 16
         layout.minimumInteritemSpacing = 16
-        let itemWidth = (UIScreen.main.bounds.width - 48) / 2
+        let itemWidth = DeviceSize.isiPadDevice ?  (UIScreen.main.bounds.width - 80) / 5 : (UIScreen.main.bounds.width - 48) / 2
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth + 20)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
@@ -122,8 +122,8 @@ class AddPositionViewController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
+                ContentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         } else {
@@ -194,8 +194,8 @@ class AddPositionViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             SearchbarContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: DeviceSize.isiPadDevice ?  38 : 0),
+            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: DeviceSize.isiPadDevice ?  -38 : 0),
             SearchbarContainer.heightAnchor.constraint(equalToConstant: 44),
 
             Searchbar.leadingAnchor.constraint(equalTo: SearchbarContainer.leadingAnchor, constant: 8),

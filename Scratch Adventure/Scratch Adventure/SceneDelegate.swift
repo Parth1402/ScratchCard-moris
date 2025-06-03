@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             guard let windowScene = (scene as? UIWindowScene) else {return}
             self.window = UIWindow(windowScene: windowScene)
             //            let homeVC = HomeViewController()
-            let homeVC = UINavigationController(rootViewController: SexTrackerViewController())
+            let homeVC = UINavigationController(rootViewController: HomeViewController())
             homeVC.navigationBar.isHidden = true
             self.window?.rootViewController = homeVC
             self.window?.makeKeyAndVisible()

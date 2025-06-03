@@ -182,10 +182,10 @@ class NoteTableViewCell: UITableViewCell {
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: DeviceSize.isiPadDevice ? 8 : 8),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: DeviceSize.isiPadDevice ? 60 : 20),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: DeviceSize.isiPadDevice ? -60 : -20),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: DeviceSize.isiPadDevice ? -16 : -8),
             
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),

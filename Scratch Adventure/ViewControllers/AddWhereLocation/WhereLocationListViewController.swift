@@ -237,8 +237,8 @@ class WhereLocationListViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             SearchbarContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: DeviceSize.isiPadDevice ?  38 : 0),
+            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: DeviceSize.isiPadDevice ?  -38 : 0),
             SearchbarContainer.heightAnchor.constraint(equalToConstant: 44),
             
             Searchbar.leadingAnchor.constraint(equalTo: SearchbarContainer.leadingAnchor, constant: 8),

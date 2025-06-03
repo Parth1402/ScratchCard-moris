@@ -51,17 +51,37 @@ class RatingTableCell: UITableViewCell {
     }
 
     private func setupLayout() {
-        NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            titleLabel.widthAnchor.constraint(equalToConstant: 120), // Adjust width as needed
-            titleLabel.heightAnchor.constraint(equalToConstant: 30), // Adjust height as needed
+        
+        if DeviceSize.isiPadDevice {
+            
+            NSLayoutConstraint.activate([
+                titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                titleLabel.widthAnchor.constraint(equalToConstant: 120), // Adjust width as needed
+                titleLabel.heightAnchor.constraint(equalToConstant: 30), // Adjust height as needed
 
-            ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 16),
-            ratingStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            ratingStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            ratingStackView.heightAnchor.constraint(equalToConstant: 40) // Adjust height as needed
-        ])
+                ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 16),
+               // ratingStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+              //  ratingStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                ratingStackView.heightAnchor.constraint(equalToConstant: 40), // Adjust height as needed
+                ratingStackView.widthAnchor.constraint(equalToConstant: 300) // Adjust height as needed
+            ])
+            
+        }else {
+            NSLayoutConstraint.activate([
+                titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                titleLabel.widthAnchor.constraint(equalToConstant: 120), // Adjust width as needed
+                titleLabel.heightAnchor.constraint(equalToConstant: 30), // Adjust height as needed
+
+                ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 16),
+                ratingStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                ratingStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                ratingStackView.heightAnchor.constraint(equalToConstant: 40) // Adjust height as needed
+            ])
+        }
+ 
+     
     }
 
     // MARK: - Configuration
@@ -134,6 +154,12 @@ class RatingTableCell: UITableViewCell {
 
     private func setupStepperView(initialValue: Int) {
         // Create minus button
+        
+        let spacerView = UIView()
+        spacerView.translatesAutoresizingMaskIntoConstraints = false
+        spacerView.widthAnchor.constraint(equalToConstant: 1).isActive = true
+        ratingStackView.addArrangedSubview(spacerView)
+        
         let minusButton = UIButton(type: .system)
         minusButton.setTitle("-", for: .normal)
         minusButton.setTitleColor(.white, for: .normal)
@@ -175,18 +201,28 @@ class RatingTableCell: UITableViewCell {
         ratingStackView.distribution = .equalCentering
 
         // Add to stack view
+        ratingStackView.addArrangedSubview(spacerView)
         ratingStackView.addArrangedSubview(minusButton)
         ratingStackView.addArrangedSubview(valueLabel)
         ratingStackView.addArrangedSubview(plusButton)
         
         ratingStackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            ratingStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -60),
-            ratingStackView.heightAnchor.constraint(equalToConstant: 50), // Adjust height as needed
-            ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 16),
-            ratingStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-        ])
-
+        
+        if DeviceSize.isiPadDevice {
+            
+            NSLayoutConstraint.activate([
+                ratingStackView.heightAnchor.constraint(equalToConstant: 50), // Adjust height as needed
+                ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+                ratingStackView.widthAnchor.constraint(equalToConstant: 180),
+            ])
+        }else{
+            NSLayoutConstraint.activate([
+                ratingStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -60),
+                ratingStackView.heightAnchor.constraint(equalToConstant: 50), // Adjust height as needed
+                ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+                ratingStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            ])
+        }
         // Save the label if you need to update value later
      //   self.valueLabel = valueLabel
     }

@@ -70,18 +70,34 @@ class NotesViewController: UIViewController {
     private func setupUI() {
         view.addSubview(addNoteButton)
         view.addSubview(notesTableView)
+        
+        if DeviceSize.isiPadDevice {
+            NSLayoutConstraint.activate([
+                addNoteButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+                addNoteButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
+                addNoteButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+                addNoteButton.heightAnchor.constraint(equalToConstant: 50),
 
-        NSLayoutConstraint.activate([
-            addNoteButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            addNoteButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            addNoteButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            addNoteButton.heightAnchor.constraint(equalToConstant: 50),
+                notesTableView.topAnchor.constraint(equalTo: addNoteButton.bottomAnchor, constant: DeviceSize.isiPadDevice ? 16 : 8),
+                notesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                notesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                notesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }else {
+            NSLayoutConstraint.activate([
+                addNoteButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+                addNoteButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                addNoteButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                addNoteButton.heightAnchor.constraint(equalToConstant: 50),
 
-            notesTableView.topAnchor.constraint(equalTo: addNoteButton.bottomAnchor, constant: 8),
-            notesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            notesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            notesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+                notesTableView.topAnchor.constraint(equalTo: addNoteButton.bottomAnchor, constant: 8),
+                notesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                notesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                notesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }
+
+  
     }
 
     @objc private func addNoteTapped() {

@@ -53,7 +53,7 @@ class MapViewController: UIViewController {
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
                 ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
@@ -444,8 +444,8 @@ class LocationContentView: UIView {
         containerViewTopConstraint = containerView.topAnchor.constraint(equalTo: bottomAnchor, constant: -collapsedHeight)
 
         NSLayoutConstraint.activate([
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: DeviceSize.isiPadDevice ? 30 : 0),
+            containerView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: DeviceSize.isiPadDevice ? -30 : 0),
             containerViewTopConstraint,
             containerView.heightAnchor.constraint(equalToConstant: expandedHeight)
         ])

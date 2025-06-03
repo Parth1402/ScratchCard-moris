@@ -152,10 +152,16 @@ class HorizontalCalendarView: UIView {
 
             // Ensure DateView has a fixed width and is circular
              dateView.translatesAutoresizingMaskIntoConstraints = false
-             NSLayoutConstraint.activate([
-                 dateView.widthAnchor.constraint(equalToConstant: 40), // Adjust width as needed
-                 dateView.heightAnchor.constraint(equalTo: dateView.widthAnchor) // Keep it circular/square
-             ])
+//             NSLayoutConstraint.activate([
+//                 dateView.widthAnchor.constraint(equalToConstant: 40), // Adjust width as needed
+//                 dateView.heightAnchor.constraint(equalTo: dateView.widthAnchor) // Keep it circular/square
+//             ])
+            
+            let cellWidth = UIScreen.main.bounds.width / 9
+            NSLayoutConstraint.activate([
+                dateView.widthAnchor.constraint(equalToConstant: cellWidth),
+                   dateView.heightAnchor.constraint(equalToConstant: 40)
+            ])
 
             // --- Create Vertical Stack for Day Column ---
             let dayColumnStack = DayColumnStackView(weekdayLabel: weekdayLabel, dateView: dateView)
@@ -274,39 +280,41 @@ class DateView: UIView {
 
     private func setupView() {
         addSubview(dayLabel)
-        layer.cornerRadius = 20 // Make it circular (half of width/height)
-        layer.masksToBounds = true
-        layer.borderWidth = 1.5 // For the outline
+        dayLabel.layer.cornerRadius = 20 // Make it circular (half of width/height)
+        dayLabel.layer.masksToBounds = true
+        dayLabel.layer.borderWidth = 1.5 // For the outline
 
         NSLayoutConstraint.activate([
             dayLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            dayLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            dayLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            dayLabel.heightAnchor.constraint(equalToConstant: 40),
+            dayLabel.widthAnchor.constraint(equalToConstant: 40)
         ])
         updateAppearance() // Initial setup
     }
 
     private func updateAppearance() {
          if isSelectedDate {
-             backgroundColor = UIColor(named: "Pink") // Selected background (Pink)
+             dayLabel.backgroundColor = UIColor(named: "Pink") // Selected background (Pink)
              dayLabel.textColor = .white
-             layer.borderColor = UIColor.clear.cgColor // No border when selected
+             dayLabel.layer.borderColor = UIColor.clear.cgColor // No border when selected
          } else if isToday {
-             backgroundColor = .clear // No background fill for today
+             dayLabel.backgroundColor = .clear // No background fill for today
              dayLabel.textColor = .white.withAlphaComponent(0.6) // Or a different color if needed
-             layer.borderColor = UIColor(named: "Violet")?.cgColor // Blue border outline
-             layer.borderWidth = 1.5 // Ensure border is visible
+             dayLabel.layer.borderColor = UIColor(named: "Violet")?.cgColor // Blue border outline
+             dayLabel.layer.borderWidth = 1.5 // Ensure border is visible
          } else {
-             backgroundColor = .clear // Default background
+             dayLabel.backgroundColor = .clear // Default background
              dayLabel.textColor = .white.withAlphaComponent(0.6) // Default text color
-             layer.borderColor = UIColor.clear.cgColor
-             layer.borderWidth = 0 // Hide border
+             dayLabel.layer.borderColor = UIColor.clear.cgColor
+             dayLabel.layer.borderWidth = 0 // Hide border
          }
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         // Ensure corner radius is always half the width for a circle
-        layer.cornerRadius = bounds.width / 2
+        dayLabel.layer.cornerRadius = 20
     }
 }
 

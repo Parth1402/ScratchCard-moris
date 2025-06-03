@@ -89,9 +89,9 @@ class LeaderboardItemCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             // Container View constraints (with padding within the cell)
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant:  8),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: DeviceSize.isiPadDevice ? 80 :20),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: DeviceSize.isiPadDevice ? -80 : -20),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
 
             // Icon constraints

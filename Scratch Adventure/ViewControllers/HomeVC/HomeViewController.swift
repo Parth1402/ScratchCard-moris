@@ -20,13 +20,13 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
     var currentDate = Date()
 
     
-    var ValultButton: UIButton = {
-        let vaultButton = UIButton()
+    var vaultImageView: UIImageView = {
+        let vaultButton = UIImageView()
         vaultButton.translatesAutoresizingMaskIntoConstraints = false
-        vaultButton.setTitle("Private vault", for: .normal)
-        vaultButton.setTitleColor(.white, for: .normal)
-        vaultButton.titleLabel?.font = UIFont.myBoldSystemFont(ofSize: 16)
-        vaultButton.layer.cornerRadius = 12
+       // vaultButton.setTitle("Private vault", for: .normal)
+       // vaultButton.setTitleColor(.white, for: .normal)
+       // vaultButton.font = UIFont.myBoldSystemFont(ofSize: 16)
+        vaultButton.layer.cornerRadius = 8
         vaultButton.clipsToBounds = true
         return vaultButton // ✅ Required
     }()
@@ -103,7 +103,6 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
     }()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.setUpBackground()
@@ -111,9 +110,11 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
         self.view.addSubview(ContentContainer)
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
-                ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+//                ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+                ContentContainer.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 50),
                 ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ContentContainer.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -50),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         }else{
@@ -124,7 +125,7 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         }
-        ContentContainer.addSubview(ValultButton)
+        ContentContainer.addSubview(vaultImageView)
         ContentContainer.addSubview(TrackerButton)
        
         setUpNavigationBar()
@@ -144,9 +145,9 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
         self.view.addSubview(ContentContainer)
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
-                ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+                ContentContainer.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 50),
                 ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ContentContainer.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: -50),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         }else{
@@ -157,7 +158,7 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         }
-        ContentContainer.addSubview(ValultButton)
+        ContentContainer.addSubview(vaultImageView)
         ContentContainer.addSubview(TrackerButton)
        
         setUpNavigationBar()
@@ -166,6 +167,7 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
         setupStatsCards()
         setupTrackerButton()
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -173,51 +175,74 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
         showStandardSheetTapped()
     }
     
-    private func setupPrivateVaultButton() {
-        // Add button to the view
-        ContentContainer.addSubview(ValultButton)
-        ValultButton.translatesAutoresizingMaskIntoConstraints = false
 
-        // Add top constraint depending on the nav bar
+    private func setupPrivateVaultButton() {
+        // Configure main image view
+        vaultImageView.translatesAutoresizingMaskIntoConstraints = false
+        vaultImageView.image = UIImage(named:  DeviceSize.isiPadDevice ? "ic_private_button" : "ic_MobilePrivate_button") // background image
+        vaultImageView.isUserInteractionEnabled = true
+        vaultImageView.contentMode = .scaleToFill
+
+        ContentContainer.addSubview(vaultImageView)
+
+        // Top anchor based on nav bar
         if let customNavBarView = customNavBarView {
-            ValultButton.topAnchor.constraint(equalTo: customNavBarView.bottomAnchor, constant: 10).isActive = true
+            vaultImageView.topAnchor.constraint(equalTo: customNavBarView.bottomAnchor, constant: 10).isActive = true
         } else {
-            ValultButton.topAnchor.constraint(equalTo: ContentContainer.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+            vaultImageView.topAnchor.constraint(equalTo: ContentContainer.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         }
 
-        // Common constraints
+        // Other constraints
         NSLayoutConstraint.activate([
-            ValultButton.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 20),
-            ValultButton.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -20),
-            ValultButton.heightAnchor.constraint(equalToConstant: 60),
+            vaultImageView.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 20),
+            vaultImageView.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -20),
+            vaultImageView.heightAnchor.constraint(equalToConstant: 60),
         ])
 
-        // Configure background image
-        ValultButton.setBackgroundImage(UIImage(named: "homescreenvaletButton"), for: .normal)
+        // Add tap gesture
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(VaultButtonTapped))
+        vaultImageView.addGestureRecognizer(tapGesture)
 
-        // Set icon & title
-        ValultButton.setImage(UIImage(named: "homeScreenValet"), for: .normal)
-        ValultButton.addTarget(self, action: #selector(VaultButtonTapped), for: .touchUpInside)
-
-        ValultButton.contentHorizontalAlignment = .left
-
-        // Adjust spacing between image and title
-        ValultButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
-        ValultButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0) // spacing between icon and title
-        
-        // Add right-side arrow image
-           let arrowImageView = UIImageView(image: UIImage(named: "rightArrowIcon")) // replace with your arrow image name
-           arrowImageView.translatesAutoresizingMaskIntoConstraints = false
-           arrowImageView.contentMode = .scaleAspectFit
-           ValultButton.addSubview(arrowImageView)
-
-           NSLayoutConstraint.activate([
-               arrowImageView.centerYAnchor.constraint(equalTo: ValultButton.centerYAnchor),
-               arrowImageView.trailingAnchor.constraint(equalTo: ValultButton.trailingAnchor, constant: -16),
-               arrowImageView.widthAnchor.constraint(equalToConstant: 24),
-               arrowImageView.heightAnchor.constraint(equalToConstant: 24),
-           ])
+//        // Add icon image (left)
+//        let iconImageView = UIImageView(image: UIImage(named: "homeScreenValet"))
+//        iconImageView.translatesAutoresizingMaskIntoConstraints = false
+//        iconImageView.contentMode = .scaleAspectFit
+//        vaultImageView.addSubview(iconImageView)
+//
+//        NSLayoutConstraint.activate([
+//            iconImageView.leadingAnchor.constraint(equalTo: vaultImageView.leadingAnchor, constant: 16),
+//            iconImageView.centerYAnchor.constraint(equalTo: vaultImageView.centerYAnchor),
+//            iconImageView.widthAnchor.constraint(equalToConstant: 30),
+//            iconImageView.heightAnchor.constraint(equalToConstant: 30),
+//        ])
+//
+//        // Add title label (centered or left-aligned next to icon)
+//        let titleLabel = UILabel()
+//        titleLabel.text = "Private Vault"
+//        titleLabel.font = UIFont.mymediumSystemFont(ofSize: 16)
+//        titleLabel.textColor = .white
+//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        vaultImageView.addSubview(titleLabel)
+//
+//        NSLayoutConstraint.activate([
+//            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 12),
+//            titleLabel.centerYAnchor.constraint(equalTo: vaultImageView.centerYAnchor)
+//        ])
+//
+//        // Add arrow image (right side)
+//        let arrowImageView = UIImageView(image: UIImage(named: "rightArrowIcon"))
+//        arrowImageView.translatesAutoresizingMaskIntoConstraints = false
+//        arrowImageView.contentMode = .scaleAspectFit
+//        vaultImageView.addSubview(arrowImageView)
+//
+//        NSLayoutConstraint.activate([
+//            arrowImageView.trailingAnchor.constraint(equalTo: vaultImageView.trailingAnchor, constant: -16),
+//            arrowImageView.centerYAnchor.constraint(equalTo: vaultImageView.centerYAnchor),
+//            arrowImageView.widthAnchor.constraint(equalToConstant: 30),
+//            arrowImageView.heightAnchor.constraint(equalToConstant: 30),
+//        ])
     }
+
     
     private func setupTrackerButton() {
         // Add button to the view
@@ -252,7 +277,7 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
 
         // Constraints
         NSLayoutConstraint.activate([
-            CalendarStack.topAnchor.constraint(equalTo: ValultButton.bottomAnchor, constant: 20),
+            CalendarStack.topAnchor.constraint(equalTo: vaultImageView.bottomAnchor, constant: 20),
             CalendarStack.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 20),
             CalendarStack.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -20),
             CalendarStack.heightAnchor.constraint(equalToConstant: 40),
@@ -499,38 +524,32 @@ extension HomeViewController {
     
     @objc func showStandardSheetTapped() {
         let sheetContentVC = SheetContentViewController()
-        // Configure presentation style
-        sheetContentVC.modalPresentationStyle = .pageSheet
+        sheetContentVC.modalPresentationStyle = .formSheet
         sheetContentVC.isModalInPresentation = true
-        
+        sheetContentVC.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: 300)
+
         if let sheet = sheetContentVC.sheetPresentationController {
-            // Define custom detents with specific identifiers
-            let mediumDetentId = UISheetPresentationController.Detent.Identifier("mediumCustom")
-            let mediumDetent = UISheetPresentationController.Detent.custom(identifier: mediumDetentId) { context in
-                return context.maximumDetentValue * 0.47 // 45% height
+            let mediumDetent = UISheetPresentationController.Detent.custom(identifier: .init("mediumCustom")) { context in
+                return  DeviceSize.isiPadDevice ? context.maximumDetentValue * 0.6 : context.maximumDetentValue * 0.47
             }
-            
-            let largeDetentId = UISheetPresentationController.Detent.Identifier("largeCustom")
-            let largeDetent = UISheetPresentationController.Detent.custom(identifier: largeDetentId) { context in
-                return context.maximumDetentValue * 0.95 // 88% height
+            let largeDetent = UISheetPresentationController.Detent.custom(identifier: .init("largeCustom")) { context in
+                return DeviceSize.isiPadDevice ? context.maximumDetentValue * 0.97 : context.maximumDetentValue * 0.95
             }
-            
-            // Configure sheet presentation
+
             sheet.detents = [mediumDetent, largeDetent]
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 20
-            sheet.largestUndimmedDetentIdentifier = mediumDetentId
+            sheet.largestUndimmedDetentIdentifier = mediumDetent.identifier
             sheet.delegate = self
-            
-      
-            
-            // Present the sheet
-            present(sheetContentVC, animated: true) {
-                // Ensure proper layout after presentation
-                sheetContentVC.view.layoutIfNeeded()
-            }
+
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
         }
+
+        present(sheetContentVC, animated: true)
     }
+
+
     
     // MARK: - UISheetPresentationControllerDelegate
     
@@ -546,3 +565,4 @@ extension HomeViewController {
         sheetPresentationController.presentedViewController.view.layoutIfNeeded()
     }
 }
+

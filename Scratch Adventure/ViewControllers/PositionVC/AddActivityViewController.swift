@@ -106,8 +106,8 @@ class AddActivityViewController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
+                ContentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         } else {
@@ -185,8 +185,8 @@ class AddActivityViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             SearchbarContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: DeviceSize.isiPadDevice ?  38 : 0),
+            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: DeviceSize.isiPadDevice ?  -38 : 0),
             SearchbarContainer.heightAnchor.constraint(equalToConstant: 44),
             
             Searchbar.leadingAnchor.constraint(equalTo: SearchbarContainer.leadingAnchor, constant: 8),

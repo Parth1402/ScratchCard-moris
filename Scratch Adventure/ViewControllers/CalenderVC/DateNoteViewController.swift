@@ -70,7 +70,7 @@ class DateNoteViewController: UIViewController, HorizontalCalendarViewDelegate {
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 60),
                 ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
@@ -190,18 +190,18 @@ class DateNoteViewController: UIViewController, HorizontalCalendarViewDelegate {
 
         NSLayoutConstraint.activate([
             
-            diaryLabel.topAnchor.constraint(equalTo: horizontalCalendarView.bottomAnchor, constant: 20),
-            diaryLabel.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 20),
+            diaryLabel.topAnchor.constraint(equalTo: horizontalCalendarView.bottomAnchor, constant: DeviceSize.isiPadDevice ? 30 : 20),
+            diaryLabel.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: DeviceSize.isiPadDevice ? 40 : 20),
             diaryLabel.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor),
             
             addNoteButton.topAnchor.constraint(equalTo: diaryLabel.bottomAnchor, constant: 20),
-            addNoteButton.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 20),
-            addNoteButton.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -20),
+            addNoteButton.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: DeviceSize.isiPadDevice ? 40 : 20),
+            addNoteButton.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: DeviceSize.isiPadDevice ? -40 : -20),
             addNoteButton.heightAnchor.constraint(equalToConstant: 50),
 
-            notesTableView.topAnchor.constraint(equalTo: addNoteButton.bottomAnchor, constant: 8),
-            notesTableView.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor),
-            notesTableView.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor),
+            notesTableView.topAnchor.constraint(equalTo: addNoteButton.bottomAnchor, constant: DeviceSize.isiPadDevice ? 16 : 8),
+            notesTableView.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor,constant: DeviceSize.isiPadDevice ? -20 : 0),
+            notesTableView.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor,constant: DeviceSize.isiPadDevice ? 20 : 0),
             notesTableView.bottomAnchor.constraint(equalTo: ContentContainer.bottomAnchor)
         ])
     }

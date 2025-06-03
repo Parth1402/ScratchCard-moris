@@ -103,8 +103,8 @@ class LocationPickerViewController: UIViewController {
         if DeviceSize.isiPadDevice {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                ContentContainer.topAnchor.constraint(equalTo: customNavBarView?.bottomAnchor ?? view.safeAreaLayoutGuide.topAnchor, constant: 8),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 60),
+                ContentContainer.topAnchor.constraint(equalTo: customNavBarView?.bottomAnchor ?? view.safeAreaLayoutGuide.topAnchor, constant: 30),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         }else{
