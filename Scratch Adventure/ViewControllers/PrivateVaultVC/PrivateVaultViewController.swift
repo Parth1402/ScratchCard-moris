@@ -34,7 +34,7 @@ class PrivateVaultViewController: UIViewController {
 
       private let messageLabel: UILabel = {
           let label = UILabel()
-          label.text = "This is your safe place where you can save your photos and videos."
+          label.text = DeviceSize.isiPadDevice ? "This is your safe place where you can save \nyour photos and videos." : "This is your safe place where you can save your photos and videos."
           label.font = UIFont.mySystemFont(ofSize: 16)
           label.textColor = .white
           label.numberOfLines = 0
@@ -57,8 +57,9 @@ class PrivateVaultViewController: UIViewController {
         layout.minimumInteritemSpacing = 5
 
         let availableWidth = UIScreen.main.bounds.width
+        let availableWidthIpad = UIScreen.main.bounds.width  / 6
 
-        layout.itemSize = CGSize(width: availableWidth / 3 - 16, height: availableWidth / 3 - 16)
+        layout.itemSize = DeviceSize.isiPadDevice ? CGSize(width: availableWidthIpad, height: availableWidthIpad) : CGSize(width: availableWidth / 3 - 16, height: availableWidth / 3 - 16)
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
@@ -134,8 +135,8 @@ class PrivateVaultViewController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
+                ContentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         } else {

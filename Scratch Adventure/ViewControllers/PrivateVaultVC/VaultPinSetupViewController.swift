@@ -111,9 +111,11 @@ class VaultPinSetupViewController: UIViewController {
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {
             return
         }
+        
+        let size = DeviceSize.isiPadDevice ? -120.0 : -20.0
 
         let keyboardHeight = keyboardFrame.height
-        setUpButtonBottomConstraint?.constant = -keyboardHeight - 20 // add spacing above keyboard
+        setUpButtonBottomConstraint?.constant = -keyboardHeight - size // add spacing above keyboard
 
         UIView.animate(withDuration: duration) {
             self.view.layoutIfNeeded()
@@ -126,7 +128,7 @@ class VaultPinSetupViewController: UIViewController {
             return
         }
 
-        setUpButtonBottomConstraint?.constant = -50
+        setUpButtonBottomConstraint?.constant = DeviceSize.isiPadDevice ? -120 : -50
 
         UIView.animate(withDuration: duration) {
             self.view.layoutIfNeeded()
@@ -181,7 +183,7 @@ class VaultPinSetupViewController: UIViewController {
         ContentContainer.addSubview(DescriptionLabel)
         ContentContainer.addSubview(PinTextfield)
         NSLayoutConstraint.activate([
-            HeaderLabel.topAnchor.constraint(equalTo: ContentContainer.topAnchor, constant: 50),
+            HeaderLabel.topAnchor.constraint(equalTo: ContentContainer.topAnchor, constant: DeviceSize.isiPadDevice ? 200 : 50),
             HeaderLabel.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 16),
             HeaderLabel.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -16),
             
@@ -192,7 +194,7 @@ class VaultPinSetupViewController: UIViewController {
             PinTextfield.topAnchor.constraint(equalTo: DescriptionLabel.bottomAnchor, constant: 30),
             PinTextfield.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 16),
             PinTextfield.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -16),
-            PinTextfield.heightAnchor.constraint(equalToConstant: 85)
+            PinTextfield.heightAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 200 : 85)
             
             
             
@@ -203,7 +205,7 @@ class VaultPinSetupViewController: UIViewController {
     func setupButton() {
         ContentContainer.addSubview(setUpButton)
         setUpButton.addTarget(self, action: #selector(SetupButtonTapped), for: .touchUpInside)
-        setUpButtonBottomConstraint = setUpButton.bottomAnchor.constraint(equalTo: ContentContainer.bottomAnchor, constant: -50)
+        setUpButtonBottomConstraint = setUpButton.bottomAnchor.constraint(equalTo: ContentContainer.bottomAnchor, constant: DeviceSize.isiPadDevice ? -120 :  -50)
         NSLayoutConstraint.activate([
             setUpButtonBottomConstraint!,
             setUpButton.heightAnchor.constraint(equalToConstant: 50),
@@ -214,11 +216,14 @@ class VaultPinSetupViewController: UIViewController {
     
     
     @objc func SetupButtonTapped() {
-        print(PinTextfield.text ?? "")
         
-        let VC = PrivateVaultViewController()
-        VC.modalPresentationStyle = .overFullScreen
-        present(VC, animated: true, completion: nil)
+        if PinTextfield.text?.count ?? 0 >= 4 {
+            VaultDataManager.shared.updateVaultPin(PinTextfield.text ?? "")
+            
+            let VC = PrivateVaultViewController()
+            VC.modalPresentationStyle = .overFullScreen
+            present(VC, animated: true, completion: nil)
+        }
         
     }
 }

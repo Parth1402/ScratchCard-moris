@@ -136,8 +136,8 @@ class AddMoreLocationViewController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
                 ScrollContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ScrollContainer.widthAnchor.constraint(equalToConstant: 460),
-                ScrollContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ScrollContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
+                ScrollContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
                 ScrollContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
 
             ])
@@ -217,8 +217,8 @@ class AddMoreLocationViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             SearchbarContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: DeviceSize.isiPadDevice ?  38 : 0),
-            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: DeviceSize.isiPadDevice ?  -38 : 0),
+            SearchbarContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: DeviceSize.isiPadDevice ?  40 : 0),
+            SearchbarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: DeviceSize.isiPadDevice ?  -48 : 0),
             SearchbarContainer.heightAnchor.constraint(equalToConstant: 44),
             
             Searchbar.leadingAnchor.constraint(equalTo: SearchbarContainer.leadingAnchor, constant: 8),

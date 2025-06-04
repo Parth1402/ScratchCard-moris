@@ -108,8 +108,8 @@
             filePath = "ViewControllers/AudioRecording/SexTrackerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "557"
-            endingLineNumber = "557"
+            startingLineNumber = "599"
+            endingLineNumber = "599"
             landmarkName = "toggleSearch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -124,8 +124,8 @@
             filePath = "ViewControllers/AudioRecording/SexTrackerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "548"
-            endingLineNumber = "548"
+            startingLineNumber = "590"
+            endingLineNumber = "590"
             landmarkName = "toggleSearch()"
             landmarkType = "7">
          </BreakpointContent>

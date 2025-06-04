@@ -248,7 +248,7 @@ class HomeViewController: UIViewController, UISheetPresentationControllerDelegat
         // Add button to the view
         ContentContainer.addSubview(TrackerButton)
         TrackerButton.translatesAutoresizingMaskIntoConstraints = false
-
+        TrackerButton.addTarget(self, action: #selector(TrackerButtonTapped), for: .touchUpInside)
         // Common constraints
         NSLayoutConstraint.activate([
             TrackerButton.topAnchor.constraint(equalTo: cardsStack.bottomAnchor, constant: 20),
@@ -481,7 +481,28 @@ extension HomeViewController {
     
     @objc func VaultButtonTapped() {
         dismiss(animated: false) {
-            let destinationViewController = VaultPinSetupViewController()
+            let pin  = VaultDataManager.shared.VaultPinGenerate
+            
+            if pin != "" {
+                let destinationViewController = EnterVaultPinViewController()
+                destinationViewController.modalPresentationStyle = .fullScreen
+                self.present(destinationViewController, animated: false, completion: nil)
+            }else {
+                let destinationViewController = VaultPinSetupViewController()
+                destinationViewController.modalPresentationStyle = .fullScreen
+                self.present(destinationViewController, animated: false, completion: nil)
+            }
+            
+       
+        }
+        
+     
+           
+    }
+    
+    @objc func TrackerButtonTapped() {
+        dismiss(animated: false) {
+            let destinationViewController = SexTrackerViewController()
             destinationViewController.modalPresentationStyle = .fullScreen
             self.present(destinationViewController, animated: false, completion: nil)
         }

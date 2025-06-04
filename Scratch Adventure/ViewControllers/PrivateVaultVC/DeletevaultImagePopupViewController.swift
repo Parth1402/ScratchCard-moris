@@ -27,7 +27,7 @@ class DeletevaultImagePopupViewController: UIViewController {
     
     private let messageLabel: UILabel = {
         let label = UILabel()
-        label.text = "It will be saved in scratch adventure\nprivate vault and will be protected"
+        label.text = DeviceSize.isiPadDevice ? "It will be saved in scratch adventure private vault and will be protected" : "It will be saved in scratch adventure\nprivate vault and will be protected"
         label.font = UIFont.mySystemFont(ofSize: 14)
         label.textColor = .white
         label.textAlignment = .center
@@ -107,11 +107,26 @@ class DeletevaultImagePopupViewController: UIViewController {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
+        if DeviceSize.isiPadDevice {
+            NSLayoutConstraint.activate([
+                popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                popupView.widthAnchor.constraint(equalToConstant: 480),
+                
+            ])
+        }else {
+            NSLayoutConstraint.activate([
+                popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                
+            ])
+        }
+        
+ 
+        
         NSLayoutConstraint.activate([
-            popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             titleLabel.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 20),

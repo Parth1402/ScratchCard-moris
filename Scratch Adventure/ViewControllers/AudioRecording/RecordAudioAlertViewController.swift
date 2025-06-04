@@ -115,8 +115,8 @@ class RecordAudioAlertViewController: UIViewController {
         NSLayoutConstraint.activate([
             popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  DeviceSize.isiPadDevice ? 100 : 20),
+            popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: DeviceSize.isiPadDevice ? -100 : -20),
             
             titleLabel.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 20),

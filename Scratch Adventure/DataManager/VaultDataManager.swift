@@ -24,6 +24,7 @@ class VaultDataManager {
     static let shared = VaultDataManager()
     private let userDefaults = UserDefaults.standard
     private let MediaArrayKey = "SavedMediaArray"
+    private let VaultPinKey = "VaultPin"
 
     private init() {}
 
@@ -47,6 +48,19 @@ class VaultDataManager {
             return []
         }
         return items
+    }
+    
+    var VaultPinGenerate: String? {
+        get {
+            return userDefaults.value(forKey: VaultPinKey) as? String ?? ""
+        }
+        set {
+            userDefaults.set(newValue, forKey: VaultPinKey)
+        }
+    }
+    
+    func updateVaultPin(_ pin: String) {
+        VaultPinGenerate = pin
     }
     
     // MARK: - Show Media

@@ -14,7 +14,7 @@ class SexTrackerViewController: UIViewController {
     // MARK: - UI Elements
     
     var customNavBarView: CustomNavigationBar?
-    
+  //  private let pulseView = PulsingWaveView()
     private var captureSession: AVCaptureSession!
     private var videoOutput: AVCaptureMovieFileOutput!
     private var previewLayer: AVCaptureVideoPreviewLayer!
@@ -25,7 +25,7 @@ class SexTrackerViewController: UIViewController {
     var audioRecorder: AVAudioRecorder?
     var recordingSession: AVAudioSession!
     var recordingFileURL: URL?
-    
+    private var waveLayers: [AnimatedWaveLayer] = []
     private var Videotimer: Timer?
     private var VideosecondsElapsed = 0
     
@@ -35,7 +35,7 @@ class SexTrackerViewController: UIViewController {
     private let VideoTimerContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.black
-        view.layer.cornerRadius = 15
+        view.layer.cornerRadius = DeviceSize.isiPadDevice ? 30 : 15
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -43,7 +43,7 @@ class SexTrackerViewController: UIViewController {
     private let VideodotView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.red
-        view.layer.cornerRadius = 7
+        view.layer.cornerRadius =  7
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -51,7 +51,7 @@ class SexTrackerViewController: UIViewController {
     private let VideotimerLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.white
-        label.font = .mymediumSystemFont(ofSize: 16)
+        label.font = .mymediumSystemFont(ofSize: DeviceSize.isiPadDevice ? 22 : 16)
         label.text = "0:00"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -133,7 +133,7 @@ class SexTrackerViewController: UIViewController {
     private let timerCircleView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
-        view.layer.cornerRadius = 120
+        view.layer.cornerRadius = DeviceSize.isiPadDevice ? 240 : 120
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -142,7 +142,7 @@ class SexTrackerViewController: UIViewController {
         let label = UILabel()
         label.backgroundColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.layer.cornerRadius = 5
+        label.layer.cornerRadius = DeviceSize.isiPadDevice ? 10 : 5
         label.clipsToBounds = true
         return label
     }()
@@ -150,7 +150,7 @@ class SexTrackerViewController: UIViewController {
     private let timerLabel: UILabel = {
         let label = UILabel()
         label.text = "0:00"
-        label.font = UIFont.myBoldSystemFont(ofSize: 48)
+        label.font = UIFont.myBoldSystemFont(ofSize: DeviceSize.isiPadDevice ? 60 : 48)
         label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -257,16 +257,18 @@ class SexTrackerViewController: UIViewController {
         NotificationCenter.default.addObserver(self,selector: #selector(VideoAlertUpdated),name: .VideoAlert,object: nil)
         //   setupWaveLayers()
         
+        setupWaveLayers()
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
                 AudioContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                AudioContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                AudioContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                AudioContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
+                AudioContentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
                 AudioContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
                 
                 VideoContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                VideoContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                VideoContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                VideoContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 80),
+                VideoContentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
                 VideoContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         } else {
@@ -284,6 +286,38 @@ class SexTrackerViewController: UIViewController {
         }
         HeaderContainer.isHidden = true
     }
+    
+    // Add the setup method for wave layers
+       private func setupWaveLayers() {
+           // Remove any existing layers
+           waveLayers.forEach { $0.removeFromSuperlayer() }
+           waveLayers.removeAll()
+
+           let numberOfWaves = 1 // You can adjust the number of waves
+           let baseDelay: TimeInterval = 0.2 // Delay between starting each wave
+
+           for i in 0..<numberOfWaves {
+               let waveLayer = AnimatedWaveLayer()
+               // Set the frame to match the timerCircleView
+               waveLayer.frame = timerCircleView.bounds
+               // Add the layer below the timer label and dot view
+               timerCircleView.layer.insertSublayer(waveLayer, at: 0)
+               waveLayers.append(waveLayer)
+
+               // Setup gradient for each layer
+               waveLayer.setupGradient(in: timerCircleView.bounds)
+
+               // Start the animation with a delay
+               let delay = TimeInterval(i) * baseDelay
+               DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                   guard let self = self else { return }
+                    // Pass the timerCircleView's bounds for path creation
+                 //  waveLayer.startAnimation(in: self.timerCircleView.bounds)
+               }
+           }
+       }
+    
+    
     
     func setUpHeaderBar() {
         view.addSubview(HeaderContainer)
@@ -329,6 +363,7 @@ class SexTrackerViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer?.frame = VideoContentContainer.bounds
+        setupWaveLayers()
     }
     
     func setUpNavigationBar() {
@@ -388,7 +423,8 @@ class SexTrackerViewController: UIViewController {
         view.addSubview(leftButton)
         view.addSubview(centerButton)
         view.addSubview(rightButton)
-        
+//        pulseView.translatesAutoresizingMaskIntoConstraints = false
+//        AudioContentContainer.addSubview(pulseView)
         
         view.addSubview(VideoTimerContainerView)
         VideoTimerContainerView.addSubview(VideodotView)
@@ -411,6 +447,8 @@ class SexTrackerViewController: UIViewController {
             self.timerCircleView.layer.insertSublayer(gradientLayer, at: 0)
         }
         
+
+        
         
         timerCircleView.translatesAutoresizingMaskIntoConstraints = false
         timerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -429,20 +467,24 @@ class SexTrackerViewController: UIViewController {
         centerButton.addTarget(self, action: #selector(toggleSearch), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            
+      
+//            pulseView.centerXAnchor.constraint(equalTo: AudioContentContainer.centerXAnchor),
+//                      pulseView.widthAnchor.constraint(equalToConstant: 260),
+//                      pulseView.heightAnchor.constraint(equalToConstant: 260),
+//            pulseView.topAnchor.constraint(equalTo: AudioContentContainer.topAnchor, constant: 50),
             
             timerCircleView.topAnchor.constraint(equalTo: AudioContentContainer.topAnchor, constant: 50),
             timerCircleView.centerXAnchor.constraint(equalTo: AudioContentContainer.centerXAnchor),
-            timerCircleView.widthAnchor.constraint(equalToConstant: 240),
-            timerCircleView.heightAnchor.constraint(equalToConstant: 240),
+            timerCircleView.widthAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 480 : 240),
+            timerCircleView.heightAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 480 : 240),
             
             timerLabel.centerXAnchor.constraint(equalTo: timerCircleView.centerXAnchor),
             timerLabel.centerYAnchor.constraint(equalTo: timerCircleView.centerYAnchor),
             
             DotView.trailingAnchor.constraint(equalTo: timerLabel.leadingAnchor,constant: -16),
             DotView.centerYAnchor.constraint(equalTo: timerCircleView.centerYAnchor),
-            DotView.heightAnchor.constraint(equalToConstant: 10),
-            DotView.widthAnchor.constraint(equalToConstant: 10),
+            DotView.heightAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 20 : 10),
+            DotView.widthAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 20 : 10),
             
             audioStatusView.topAnchor.constraint(equalTo: timerCircleView.bottomAnchor, constant: 50),
             audioStatusView.centerXAnchor.constraint(equalTo: AudioContentContainer.centerXAnchor),
@@ -483,13 +525,13 @@ class SexTrackerViewController: UIViewController {
             VideoTimerContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             // Fixed height for container
-            VideoTimerContainerView.heightAnchor.constraint(equalToConstant: 30),
+            VideoTimerContainerView.heightAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 60 : 30),
             
             // Dot constraints
             VideodotView.leadingAnchor.constraint(equalTo: VideoTimerContainerView.leadingAnchor, constant: 8),
             VideodotView.centerYAnchor.constraint(equalTo: VideoTimerContainerView.centerYAnchor),
-            VideodotView.widthAnchor.constraint(equalToConstant: 10),
-            VideodotView.heightAnchor.constraint(equalToConstant: 10),
+            VideodotView.widthAnchor.constraint(equalToConstant:  14),
+            VideodotView.heightAnchor.constraint(equalToConstant:  14),
             
             // Timer label constraints
             VideotimerLabel.leadingAnchor.constraint(equalTo: VideodotView.trailingAnchor, constant: 6),
@@ -679,11 +721,12 @@ extension SexTrackerViewController {
     
     @objc func AlertUpdated() {
         startRecording()
+        mediaCollectionView.isHidden = true
     }
     
     @objc func VideoAlertUpdated() {
         // startRecording()
-        
+        mediaCollectionView.isHidden = true
         startVideoRecording()
         
         
@@ -703,13 +746,13 @@ extension SexTrackerViewController {
             VideoTimerContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             // Fixed height for container
-            VideoTimerContainerView.heightAnchor.constraint(equalToConstant: 30),
+            VideoTimerContainerView.heightAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 60 : 30),
             
             // Dot constraints
             VideodotView.leadingAnchor.constraint(equalTo: VideoTimerContainerView.leadingAnchor, constant: 8),
             VideodotView.centerYAnchor.constraint(equalTo: VideoTimerContainerView.centerYAnchor),
-            VideodotView.widthAnchor.constraint(equalToConstant: 14),
-            VideodotView.heightAnchor.constraint(equalToConstant: 14),
+            VideodotView.widthAnchor.constraint(equalToConstant:  14),
+            VideodotView.heightAnchor.constraint(equalToConstant:  14),
             
             // Timer label constraints
             VideotimerLabel.leadingAnchor.constraint(equalTo: VideodotView.trailingAnchor, constant: 6),
@@ -789,6 +832,7 @@ extension SexTrackerViewController {
             videoOutput.stopRecording()
             VideoStopTimer()
         }
+        mediaCollectionView.isHidden = false
     }
     
     private func VideoStartTimer() {
@@ -911,7 +955,7 @@ extension SexTrackerViewController {
         timerLabel.text = "00:00"
         timerLabel.isHidden = false
         DotView.isHidden = false
-        
+        mediaCollectionView.isHidden = false
         recordingTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             self?.updateRecordingTime()
         }
@@ -919,6 +963,7 @@ extension SexTrackerViewController {
         blinkTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             self?.toggleBlinkDot()
         }
+        waveLayers.forEach { $0.startAnimation(in: timerCircleView.bounds) }
     }
     
     
@@ -945,7 +990,7 @@ extension SexTrackerViewController {
         timerLabel.text = "00:00"
         DotView.isHidden = true
         audioRecorder?.stop()
-        
+        mediaCollectionView.isHidden = false
         centerButton.setImage(UIImage(named:  "ic_record_play")?.withRenderingMode(.alwaysOriginal), for: .normal)
         centerButton.imageView?.accessibilityIdentifier = "ic_record_play"
         
@@ -955,6 +1000,9 @@ extension SexTrackerViewController {
         
         HeaderContainer.isHidden = !isSearching
         customNavBarView?.isHidden = isSearching
+        
+        // Stop the wave animations
+             waveLayers.forEach { $0.stopAnimation() }
     }
 }
 
@@ -978,5 +1026,55 @@ extension SexTrackerViewController: AVCaptureFileOutputRecordingDelegate {
                 print(saved ? "✅ Video saved" : "❌ Save failed: \(error?.localizedDescription ?? "")")
             }
         }
+    }
+}
+
+
+import UIKit
+
+class PulsingWaveView: UIView {
+
+    private var waveLayers: [CAShapeLayer] = []
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        // Prevent re-adding
+        guard waveLayers.isEmpty else { return }
+
+        for i in 0..<3 {
+            let layer = CAShapeLayer()
+            let size: CGFloat = min(bounds.width, bounds.height)
+            let path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: size, height: size))
+            layer.path = path.cgPath
+            layer.position = CGPoint(x: (bounds.width - size)/2, y: (bounds.height - size)/2)
+            layer.fillColor = UIColor.clear.cgColor
+            layer.strokeColor = UIColor.systemPurple.cgColor
+            layer.lineWidth = 6
+            layer.opacity = 0
+            self.layer.addSublayer(layer)
+            waveLayers.append(layer)
+
+            animateWave(layer, delay: Double(i) * 0.5)
+        }
+    }
+
+    private func animateWave(_ layer: CAShapeLayer, delay: Double) {
+        let scale = CABasicAnimation(keyPath: "transform.scale")
+        scale.fromValue = 1.0
+        scale.toValue = 1.6
+
+        let opacity = CABasicAnimation(keyPath: "opacity")
+        opacity.fromValue = 0.6
+        opacity.toValue = 0.0
+
+        let group = CAAnimationGroup()
+        group.animations = [scale, opacity]
+        group.duration = 2.0
+        group.beginTime = CACurrentMediaTime() + delay
+        group.repeatCount = .infinity
+        group.timingFunction = CAMediaTimingFunction(name: .easeOut)
+
+        layer.add(group, forKey: "pulse")
     }
 }

@@ -120,18 +120,18 @@ class AudioRecorderPopupViewController: UIViewController {
             micImageView.widthAnchor.constraint(equalToConstant: 120),
 
             titleLabel.topAnchor.constraint(equalTo: micImageView.bottomAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -20),
+            titleLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant:  20),
+            titleLabel.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant:  -20),
 
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
-            descriptionLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 20),
-            descriptionLabel.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -20),
+            descriptionLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: DeviceSize.isiPadDevice ? 120 : 20),
+            descriptionLabel.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: DeviceSize.isiPadDevice ? -120 : -20),
 
             turnOnButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 24),
-            turnOnButton.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 20),
-            turnOnButton.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -20),
+            turnOnButton.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: DeviceSize.isiPadDevice ? 80 : 20),
+            turnOnButton.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: DeviceSize.isiPadDevice ? -80 : -20),
             turnOnButton.heightAnchor.constraint(equalToConstant: 50),
-            turnOnButton.bottomAnchor.constraint(equalTo: popupView.bottomAnchor, constant: -24)
+            turnOnButton.bottomAnchor.constraint(equalTo: popupView.bottomAnchor, constant: DeviceSize.isiPadDevice ? -50 : -24)
         ])
     }
 
