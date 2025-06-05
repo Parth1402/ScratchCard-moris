@@ -33,20 +33,9 @@ class EnterVaultPinViewController: UIViewController {
     var HeaderLabel: UILabel = {
         let Label = UILabel()
         Label.translatesAutoresizingMaskIntoConstraints = false
-        Label.text = "Set up a PIN-code"
+        Label.text = "Enter PIN-code"
         Label.textColor = UIColor.white
         Label.font = UIFont.myBoldSystemFont(ofSize: 28)
-        Label.textAlignment = .center
-        Label.clipsToBounds = true
-        return Label
-    }()
-    
-    var DescriptionLabel: UILabel = {
-        let Label = UILabel()
-        Label.translatesAutoresizingMaskIntoConstraints = false
-        Label.text = "Set up a PIN-code for your vault."
-        Label.font = UIFont.mySystemFont(ofSize: 14)
-        Label.textColor = UIColor.white
         Label.textAlignment = .center
         Label.clipsToBounds = true
         return Label
@@ -68,8 +57,8 @@ class EnterVaultPinViewController: UIViewController {
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
                 ContentContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                ContentContainer.widthAnchor.constraint(equalToConstant: 460),
-                ContentContainer.topAnchor.constraint(equalTo: self.view.topAnchor),
+                ContentContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 200),
+                ContentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
                 ContentContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             ])
         } else {
@@ -96,9 +85,9 @@ class EnterVaultPinViewController: UIViewController {
         ContentContainer.addSubview(pinStackView)
         pinStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            pinStackView.topAnchor.constraint(equalTo: DescriptionLabel.bottomAnchor, constant: 30),
+            pinStackView.topAnchor.constraint(equalTo: HeaderLabel.bottomAnchor, constant: 30),
             pinStackView.centerXAnchor.constraint(equalTo: ContentContainer.centerXAnchor),
-            pinStackView.heightAnchor.constraint(equalToConstant: 70)
+            pinStackView.heightAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 100 : 70)
         ])
         
         for _ in 0..<4 {
@@ -110,7 +99,7 @@ class EnterVaultPinViewController: UIViewController {
             label.backgroundColor = UIColor(hexString: "#9A03D0")?.withAlphaComponent(0.26) ?? UIColor.purple
             label.textColor = .white
             pinLabels.append(label)
-            label.widthAnchor.constraint(equalToConstant: 50).isActive = true
+            label.widthAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 80 : 50).isActive = true
             pinStackView.addArrangedSubview(label)
         }
     }
@@ -134,7 +123,7 @@ class EnterVaultPinViewController: UIViewController {
         NSLayoutConstraint.activate([
             keypad.topAnchor.constraint(equalTo: pinStackView.bottomAnchor, constant: 50),
             keypad.centerXAnchor.constraint(equalTo: ContentContainer.centerXAnchor),
-            keypad.widthAnchor.constraint(equalToConstant: 250),
+            keypad.widthAnchor.constraint(equalToConstant: DeviceSize.isiPadDevice ? 400 :  250),
             keypad.heightAnchor.constraint(equalToConstant: 330)
         ])
         
@@ -169,7 +158,7 @@ class EnterVaultPinViewController: UIViewController {
                 let button = UIButton(type: .system)
                 if let title = item.title {
                     button.setTitle(title, for: .normal)
-                    button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .medium)
+                    button.titleLabel?.font = UIFont.mySystemFont(ofSize: DeviceSize.isiPadDevice ? 30 :  24)
                     button.setTitleColor(.white, for: .normal)
                     button.tag = (item.title != nil) ? Int(item.title!) ?? -1 : -1
                 } else if let imageName = item.imageName {
@@ -304,15 +293,10 @@ class EnterVaultPinViewController: UIViewController {
     
     func setupLabel(){
         ContentContainer.addSubview(HeaderLabel)
-        ContentContainer.addSubview(DescriptionLabel)
         NSLayoutConstraint.activate([
             HeaderLabel.topAnchor.constraint(equalTo: ContentContainer.topAnchor, constant: DeviceSize.isiPadDevice ? 200 : 50),
             HeaderLabel.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 16),
             HeaderLabel.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -16),
-            
-            DescriptionLabel.topAnchor.constraint(equalTo: HeaderLabel.bottomAnchor, constant: 16),
-            DescriptionLabel.leadingAnchor.constraint(equalTo: ContentContainer.leadingAnchor, constant: 16),
-            DescriptionLabel.trailingAnchor.constraint(equalTo: ContentContainer.trailingAnchor, constant: -16),
             
             
             

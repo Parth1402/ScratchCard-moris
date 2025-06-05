@@ -257,7 +257,7 @@ class SexTrackerViewController: UIViewController {
         NotificationCenter.default.addObserver(self,selector: #selector(VideoAlertUpdated),name: .VideoAlert,object: nil)
         //   setupWaveLayers()
         
-        setupWaveLayers()
+      //  setupWaveLayers()
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             NSLayoutConstraint.activate([
@@ -293,7 +293,7 @@ class SexTrackerViewController: UIViewController {
            waveLayers.forEach { $0.removeFromSuperlayer() }
            waveLayers.removeAll()
 
-           let numberOfWaves = 1 // You can adjust the number of waves
+           let numberOfWaves = 5 // You can adjust the number of waves
            let baseDelay: TimeInterval = 0.2 // Delay between starting each wave
 
            for i in 0..<numberOfWaves {
@@ -363,7 +363,8 @@ class SexTrackerViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer?.frame = VideoContentContainer.bounds
-        setupWaveLayers()
+      //  setupWaveLayers()
+        waveLayers.forEach { $0.startAnimation(in: timerCircleView.bounds) }
     }
     
     func setUpNavigationBar() {
@@ -963,7 +964,9 @@ extension SexTrackerViewController {
         blinkTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             self?.toggleBlinkDot()
         }
-        waveLayers.forEach { $0.startAnimation(in: timerCircleView.bounds) }
+       
+        
+        setupWaveLayers()
     }
     
     
